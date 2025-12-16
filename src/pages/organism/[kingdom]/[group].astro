@@ -1,0 +1,83 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getOrganisms } from '../../../lib/db';
+import type { Organism } from '../../../lib/types';
+
+/**
+ * Genera rutas: /organism/:kingdom/:group
+ */
+export async function getStaticPaths() {
+  const organisms: Organism[] = getOrganisms();
+
+  const pairs = Array.from(
+    organisms
+      .filter(o => o.kingdom && o.group)
+      .map(o => ({
+        kingdom: o.kingdom!.toLowerCase(),
+        group: o.group!.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+      }))
+      .reduce((acc, cur) => {
+        const key = `${cur.kingdom}::${cur.group}`;
+        acc.add(key);
+        return acc;
+      }, new Set<string>())
+  ).map(k => {
+    const [kingdom, group] = k.split('::');
+    return { params: { kingdom, group } };
+  });
+
+  return pairs;
+}
+
+const { kingdom, group } = Astro.params;
+
+// Normalizar para mostrar
+const kingdomName = kingdom.charAt(0).toUpperCase() + kingdom.slice(1).toLowerCase();
+const groupName = group.replace(/-/g, ' ');
+
+const organisms = getOrganisms().filter(
+  o => o.kingdom?.toLowerCase() === kingdom &&
+       (o.group ?? '').toLowerCase().replace(/\s+/g, '-') === group
+);
+
+---
+<StarlightPage
+  frontmatter={{
+    title: `${groupName} — ${kingdomName}`,
+    description: `Organismos del grupo ${groupName} en el reino ${kingdomName}`
+  }}
+>
+  <p>
+    Organismos pertenecientes al grupo <strong>{groupName}</strong> del reino
+    <strong> {kingdomName}</strong>.
+  </p>
+
+  {organisms.length === 0 && <p>No hay organismos registrados en este grupo.</p>}
+
+  <CardGrid>
+    {organisms.map(org => (
+      <Card title={org.name}>
+        {org.description && <p>{org.description}</p>}
+        {org.era && (
+          <p>
+            <strong>Era:</strong> {org.era}
+          </p>
+        )}
+        <a href={`/organism/${org.slug}/`}>Ver ficha →</a>
+      </Card>
+    ))}
+  </CardGrid>
+</StarlightPage>
+
+<style>
+  a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

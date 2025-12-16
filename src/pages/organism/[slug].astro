@@ -23,30 +23,60 @@ if (!organism) {
 }
 ---
 
-<StarlightPage frontmatter={{ title: organism.name, description: organism.description ?? `Ficha del organismo prehistórico ${organism.name}.` }}>
+<StarlightPage
+  frontmatter={{
+    title: organism.name,
+    description:
+      organism.description ??
+      `Ficha del organismo prehistórico ${organism.name}.`
+  }}
+>
   <section>
     <h2>Clasificación</h2>
+
     <CardGrid>
-      <Card title="Reino" icon="document">
-        {organism.kingdom}
-      </Card>
-      <Card title="Clado" icon="document">
-        {organism.clade}
-      </Card>
-      <Card title="Era" icon="document">
-        {organism.era}
-      </Card>
-      <Card title="Período" icon="document">
-        {organism.period}
-      </Card>
-      <Card title="Dieta" icon="document">
-        {organism.diet}
-      </Card>
+      {organism.kingdom && (
+        <Card title="Reino" icon="document">
+          {organism.kingdom}
+        </Card>
+      )}
+
+      {organism.group && (
+        <Card title="Grupo" icon="document">
+          {organism.group}
+        </Card>
+      )}
+
+      {organism.clade && (
+        <Card title="Clado" icon="document">
+          {organism.clade}
+        </Card>
+      )}
+
+      {organism.era && (
+        <Card title="Era" icon="document">
+          {organism.era}
+        </Card>
+      )}
+
+      {organism.period && (
+        <Card title="Período" icon="document">
+          {organism.period}
+        </Card>
+      )}
+
+      {organism.diet && (
+        <Card title="Dieta" icon="document">
+          {organism.diet}
+        </Card>
+      )}
     </CardGrid>
   </section>
 
-  <section>
-    <h2>Descripción</h2>
-    <p>{organism.description}</p>
-  </section>
+  {organism.description && (
+    <section>
+      <h2>Descripción</h2>
+      <p>{organism.description}</p>
+    </section>
+  )}
 </StarlightPage>

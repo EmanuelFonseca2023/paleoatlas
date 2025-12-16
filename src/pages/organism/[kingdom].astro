@@ -1,0 +1,104 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getOrganisms } from '../../lib/db';
+import type { Organism } from '../../lib/types';
+
+/**
+ * Build-time paths
+ * Genera: /organisms/animalia, /organisms/plantae, etc.
+ */
+export async function getStaticPaths() {
+  const organisms: Organism[] = getOrganisms();
+
+  const kingdoms = Array.from(
+    new Set(
+      organisms
+        .map(o => o.kingdom)
+        .filter((k): k is string => Boolean(k))
+        .map(k => k.toLowerCase())
+    )
+  );
+
+  return kingdoms.map(kingdom => ({
+    params: { kingdom }
+  }));
+}
+
+const { kingdom } = Astro.params;
+
+// Normalizar para comparar con la DB
+const kingdomName =
+  kingdom.charAt(0).toUpperCase() + kingdom.slice(1).toLowerCase();
+
+const organisms = getOrganisms().filter(
+  o => o.kingdom?.toLowerCase() === kingdom
+);
+
+// Agrupar por group
+const grouped = organisms.reduce((acc, org) => {
+  const group = org.group ?? 'Otros';
+
+  acc[group] ??= [];
+  acc[group].push(org);
+
+  return acc;
+}, {} as Record<string, Organism[]>);
+---
+<StarlightPage
+  frontmatter={{
+    title: kingdomName,
+    description: `Organismos prehistóricos del reino ${kingdomName}`
+  }}
+>
+  <p>
+    Explora los organismos prehistóricos pertenecientes al reino
+    <strong> {kingdomName}</strong>.
+  </p>
+
+  {organisms.length === 0 && (
+    <p>No hay organismos registrados para este reino.</p>
+  )}
+
+  <section>
+    <h2>Grupos</h2>
+
+    <CardGrid>
+      {Object.entries(grouped).map(([group, organisms]) => (
+        <Card title={group}>
+          <p>{organisms.length} organismo{organisms.length !== 1 ? 's' : ''}</p>
+          <p>
+            <a
+              href={`/organism/${kingdom}/${group
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^a-z0-9\-]/g, '')}/`}
+            >
+              Explorar grupo →
+            </a>
+          </p>
+        </Card>
+      ))}
+    </CardGrid>
+  </section>
+</StarlightPage>
+
+<style>
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
