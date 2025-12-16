@@ -16,132 +16,826 @@ const { extinction } = Astro.params;
 const extinctionData: Record<string, any> = {
   'ordovicico-silurico': {
     title: 'Extinción del Ordovícico-Silúrico',
-    description: 'La primera extinción masiva conocida',
-    when: 'Hace aproximadamente 443 millones de años',
-    severity: '85% de las especies marinas',
-    content: `La extinción del Ordovícico-Silúrico fue la primera extinción masiva conocida:
+    description: 'La primera gran extinción masiva documentada',
+    when: 'Hace 444-443 millones de años',
+    duration: '500.000 - 1 millón de años',
+    severity: '~86% de todas las especies (85% de especies marinas)',
+    ranking: 'Segunda más devastadora en el océano',
+    content: `La extinción del Ordovícico-Silúrico fue la primera extinción masiva bien documentada en la historia de la Tierra. Ocurrió en dos pulsos distintos separados por cientos de miles de años, cada uno con causas y efectos específicos.`,
+    causes: [
+      {
+        title: 'Evento de Doble Pulso',
+        description: 'Dos extinciones separadas en un corto período geológico, cada una con características distintas'
+      },
+      {
+        title: 'Primera Fase: Glaciación Masiva',
+        description: 'Formación de una capa de hielo masiva en el supercontinente Gondwana. Descenso dramático del nivel del mar (hasta 100 metros). Enfriamiento global severo. Destrucción de hábitats marinos de aguas someras.'
+      },
+      {
+        title: 'Segunda Fase: Deglaciación Rápida',
+        description: 'Rápida fusión del hielo glacial. Subida abrupta del nivel del mar. Cambio brusco de temperaturas frías a cálidas. Anoxia oceánica (falta de oxígeno en aguas profundas).'
+      },
+      {
+        title: 'Cambios en la Química Oceánica',
+        description: 'Alteración de las corrientes oceánicas. Estratificación del océano. Zonas muertas sin oxígeno expandiéndose.'
+      },
+      {
+        title: 'Posible Explosión de Supernova',
+        description: 'Hipótesis controvertida: una supernova cercana pudo haber bombardeado la Tierra con radiación gamma, destruyendo parcialmente la capa de ozono y exponiendo la vida a radiación ultravioleta letal.'
+      }
+    ],
+    affected: [
+      {
+        group: 'Trilobites',
+        impact: 'Perdieron más del 75% de sus especies. Nunca recuperaron su diversidad previa. Grupos enteros desaparecieron permanentemente.'
+      },
+      {
+        group: 'Braquiópodos',
+        impact: 'Extremadamente devastados. Muchas familias enteras extintas. Los supervivientes tuvieron que recolonizar los océanos.'
+      },
+      {
+        group: 'Briozoos',
+        impact: 'Colapso masivo de comunidades. Pérdida de ~50% de familias.'
+      },
+      {
+        group: 'Graptolites',
+        impact: 'Grupos planctónicos casi totalmente eliminados. Solo sobrevivieron unas pocas especies.'
+      },
+      {
+        group: 'Conodontes',
+        impact: 'Fuerte reducción en diversidad. Muchas especies desaparecieron.'
+      },
+      {
+        group: 'Equinodermos',
+        impact: 'Crinoideos (lirios de mar) sufrieron grandes pérdidas. Cerca de 100 familias biológicas completas desaparecieron.'
+      },
+      {
+        group: 'Corales y Arrecifes',
+        impact: 'Colapso casi total de los ecosistemas de arrecife. Los arrecifes no se recuperaron completamente hasta millones de años después.'
+      }
+    ],
+    survivors: 'Algunos trilobites resistentes, peces primitivos sin mandíbula (agnatos), algunos braquiópodos de aguas profundas, moluscos primitivos en refugios.',
+    context: `**Contexto geológico y biológico:**
 
-**Causas Principales:**
-- Glaciación extrema en el continente de Gondwana
-- Cambios rápidos en el nivel del mar
-- Enfriamiento global significativo
-- Posible impacto de rayos cósmicos
+En esta época, la vida estaba confinada casi exclusivamente a los océanos. No había vida compleja en tierra firme, solo posiblemente algunos líquenes y bacterias costeras.
 
-**Efectos:**
-- Eliminación del 85% de las especies marinas
-- Colapso de ecosistemas marinos
-- Supervivencia de algunos trilobites, braquiópodos y peces primitivos
-- Fauna marina completamente reorganizada
+Los océanos del Ordovícico estaban repletos de vida invertebrada marina:
+- Trilobites dominaban los fondos oceánicos con miles de especies
+- Braquiópodos filtraban nutrientes en aguas someras
+- Los primeros arrecifes de coral verdaderos se habían formado
+- Graptolites flotaban en el plancton
+- Los primeros peces verdaderos (sin mandíbulas) nadaban en los mares
 
-**Recuperación:**
-- Diversificación gradual de peces en el Silúrico
-- Reconstitución de arrecifes de coral
-- Desarrollo de nuevas comunidades marinas`,
+Era el período de mayor diversidad marina hasta ese momento en la historia de la Tierra.`,
+    recovery: `**Proceso de recuperación:**
+
+La recuperación de la vida marina fue lenta y desigual:
+
+- **Primeros 2-3 millones de años:** Fauna muy empobrecida, baja diversidad
+- **Periodo Silúrico:** Gradual recolonización de los océanos
+- **5-10 millones de años:** Retorno de la diversidad, pero con composiciones de especies completamente diferentes
+- Los trilobites nunca volvieron a ser tan diversos como antes
+- Nuevos grupos de organismos ocuparon los nichos dejados vacantes
+- Los arrecifes de coral eventualmente se recuperaron pero con especies diferentes
+
+**Paradoja importante:** Aunque fue devastadora, esta extinción también abrió espacio ecológico para nuevos grupos, incluyendo los primeros peces con mandíbulas que surgirían en el Silúrico.`,
+    importance: 'Primera demostración de que la vida en la Tierra es vulnerable a cambios ambientales rápidos. Estableció el patrón que se repetiría en futuras extinciones: cambios climáticos drásticos causan extinciones masivas. Los cambios de temperatura súbitos son especialmente letales para la vida marina.',
+    modernLessons: 'Esta extinción nos enseña que los cambios rápidos en el clima global pueden ser catastróficos. Actualmente estamos experimentando un cambio climático acelerado antropogénico que, según algunos científicos, podría estar ocurriendo más rápido que durante el Ordovícico-Silúrico.',
   },
   devonico: {
-    title: 'Extinción del Devónico',
-    description: 'La extinción del Devónico tardío',
-    when: 'Hace aproximadamente 375 millones de años',
-    severity: '75% de las especies',
-    content: `La extinción del Devónico fue compleja y ocurrió en múltiples pulsos:
+    title: 'Extinción del Devónico Tardío',
+    description: 'Serie de crisis que destruyeron la era de los peces',
+    when: 'Hace 375-360 millones de años',
+    duration: '~3 millones de años (múltiples pulsos)',
+    severity: '~75-82% de todas las especies',
+    ranking: 'Tercera o cuarta más devastadora',
+    content: `La extinción del Devónico Tardío no fue un evento único, sino una serie de crisis ambientales concatenadas que ocurrieron durante un período de aproximadamente 3 millones de años. Fue particularmente devastadora para la vida marina y marcó el fin de la "Edad de los Peces".`,
+    causes: [
+      {
+        title: 'Evento Kellwasser (Crisis Principal)',
+        description: 'Dos pulsos de extinción separados por ~1 millón de años. Evento Kellwasser Inferior (~375 Ma) y Superior (~372 Ma). Causados por anoxia oceánica masiva (pérdida de oxígeno en los océanos).'
+      },
+      {
+        title: 'Erupciones Volcánicas Masivas',
+        description: 'Traps de Viluy en Siberia: uno de los mayores eventos volcánicos conocidos. Liberación de aproximadamente 960.000 km³ de material volcánico. Emisiones masivas de CO₂ y SO₂ a la atmósfera. Lluvia ácida global. Calentamiento seguido de enfriamiento rápido.'
+      },
+      {
+        title: 'Eutrofización Oceánica',
+        description: 'Causa paradójica relacionada con la evolución de las plantas terrestres: Las plantas con raíces profundas evolucionaron durante el Devónico. Las raíces penetraban rocas y liberaban nutrientes (nitrógeno y fósforo) hacia los ríos. Estos nutrientes fluyeron hacia los océanos en cantidades sin precedentes. Proliferación masiva de algas (blooms algales). Las algas consumieron todo el oxígeno del agua al morir y descomponerse. Zonas muertas oceánicas (anoxia) se expandieron globalmente.'
+      },
+      {
+        title: 'Cambios Drásticos de Temperatura',
+        description: 'Fluctuaciones rápidas entre períodos cálidos y fríos. Enfriamiento global al final del Devónico. Posible glaciación en latitudes altas.'
+      },
+      {
+        title: 'Posible Impacto de Meteorito',
+        description: 'Cráter Siljan en Suecia (~377 Ma) coincide temporalmente. Impacto pudo haber contribuido pero no fue la causa principal.'
+      }
+    ],
+    affected: [
+      {
+        group: 'Placodermos (Peces Acorazados)',
+        impact: 'EXTINCIÓN TOTAL. Grupo completo desapareció. Eran los peces dominantes del Devónico. Nunca más existieron peces con ese tipo de armadura ósea externa. Pérdida de los mayores depredadores marinos de la época (Dunkleosteus de 10 m).'
+      },
+      {
+        group: 'Arrecifes de Coral',
+        impact: 'Colapso catastrófico. Los grandes arrecifes del Devónico fueron completamente destruidos. Los corales constructores de arrecifes (estromatoporoideos y rugosos) casi se extinguieron. No se recuperaron significativamente hasta 100 millones de años después, en el Mesozoico. Este fue el mayor colapso de arrecifes en la historia geológica.'
+      },
+      {
+        group: 'Trilobites',
+        impact: 'Sufrieron otra reducción masiva. Perdieron más de la mitad de sus familias restantes. Quedaron relegados a roles ecológicos marginales.'
+      },
+      {
+        group: 'Ammonoideos',
+        impact: 'Reducidos a una sola familia superviviente. De cientos de especies a menos de 10.'
+      },
+      {
+        group: 'Braquiópodos',
+        impact: 'Gran reducción en diversidad. Muchos grupos especializados desaparecieron.'
+      },
+      {
+        group: 'Organismos de Aguas Cálidas',
+        impact: 'Las especies tropicales fueron las más afectadas. Los organismos de latitudes altas tuvieron mejor supervivencia.'
+      },
+      {
+        group: 'Vida Marina en General',
+        impact: 'Aproximadamente 20% de todas las familias marinas se extinguieron. Cerca del 75-82% de especies desaparecieron.'
+      }
+    ],
+    survivors: 'Peces óseos (osteíctios), tiburones primitivos, algunos invertebrados de aguas profundas, primeros anfibios terrestres (no afectados por crisis oceánica).',
+    context: `**El Devónico era conocido como la "Edad de los Peces":**
 
-**Causas Principales:**
-- Cambios en los niveles de oxígeno oceánico
-- Cambios climáticos drásticos
-- Posible impacto de asteroide
-- Evolución de plantas terrestres que alteró el ciclo del carbono
+- Los océanos estaban llenos de peces diversos: placodermos gigantes con armadura, peces cartilaginosos, peces óseos
+- Arrecifes de coral masivos rodeaban las costas
+- Vida marina extremadamente diversa y abundante
+- En tierra, las plantas habían comenzado a colonizar los continentes
+- Los primeros bosques primitivos estaban formándose
+- Los primeros tetrápodos (vertebrados de cuatro patas) emergían del agua hacia la tierra
 
-**Efectos:**
-- Eliminación del 75% de todas las especies
-- Casi total desaparición de los placodermos (peces acorazados)
-- Crisis en los arrecifes de coral
-- Supervivencia de algunos peces con esqueleto óseo
+**Ironía trágica:** La evolución de las plantas terrestres, uno de los mayores logros de la vida, indirectamente causó la extinción masiva al alterar fundamentalmente los ciclos de nutrientes globales.`,
+    recovery: `**Recuperación y consecuencias:**
 
-**Recuperación:**
-- Diversificación de peces óseos
-- Desarrollo de nuevos arrecifes en el Carbonífero
-- Primeros anfibios evolucionando`,
+- **Inmediato (primeros millones de años):** Océanos empobrecidos, ecosistemas simplificados
+- **10-15 millones de años:** Gradual recuperación de la diversidad
+- Los arrecifes de coral nunca volvieron a su gloria del Devónico durante el Paleozoico
+- Los placodermos desaparecieron para siempre, dejando el camino libre para otros peces
+- Los peces óseos (que incluyen a nuestros ancestros) se diversificaron
+- Los tiburones prosperaron en ausencia de placodermos competidores
+- En tierra, los anfibios continuaron evolucionando sin ser afectados
+
+**Cambio de paradigma:** La extinción cambió fundamentalmente la composición de los ecosistemas marinos. Los arrecifes del Carbonífero y Pérmico fueron completamente diferentes a los del Devónico.`,
+    importance: 'Demostró que la vida puede causar su propia extinción masiva a través de cambios ambientales. La evolución de las plantas terrestres alteró fundamentalmente los ciclos biogeoquímicos globales, mostrando la interconexión entre vida terrestre y marina. Fue un recordatorio de que el éxito evolutivo de un grupo puede tener consecuencias catastróficas no intencionales.',
+    modernLessons: 'Actualmente, los humanos estamos alterando masivamente los ciclos de nutrientes globales con fertilizantes agrícolas, causando zonas muertas oceánicas similares a las del Devónico. Las "zonas muertas" modernas en el Golfo de México, el Mar Báltico y otras áreas son análogos directos a lo que ocurrió hace 375 millones de años.',
   },
   permico: {
-    title: 'Gran Extinción del Pérmico',
-    description: 'La extinción más severa de todas',
-    when: 'Hace aproximadamente 252 millones de años',
-    severity: '96% de las especies marinas',
-    content: `La Gran Extinción del Pérmico fue la más severa en la historia de la Tierra:
+    title: 'Gran Extinción del Pérmico-Triásico',
+    description: 'La Gran Mortandad - La extinción más devastadora de todos los tiempos',
+    when: 'Hace 251.9 millones de años',
+    duration: '~1 millón de años (con pico catastrófico en ~60.000 años)',
+    severity: '~96% de especies marinas, ~70% de especies terrestres, ~83% de géneros de insectos',
+    ranking: 'LA MÁS DEVASTADORA DE LA HISTORIA',
+    content: `La extinción del Pérmico-Triásico, conocida como "La Gran Mortandad" o "La Madre de Todas las Extinciones", fue el evento de extinción más catastrófico en la historia de la vida compleja en la Tierra. Estuvo peligrosamente cerca de exterminar toda la vida multicelular del planeta. Es el único evento conocido que causó extinción masiva de insectos.`,
+    causes: [
+      {
+        title: 'Traps Siberianos: El Evento Volcánico Más Devastador',
+        description: `**Magnitud sin precedentes:**
+- Erupciones volcánicas que duraron entre 1-2 millones de años
+- Volumen expulsado: 3-4 millones de km³ de lava (suficiente para cubrir toda Europa con una capa de 1 km)
+- Una de las mayores provincias ígneas de toda la historia geológica
+- Cubrió un área de ~7 millones de km² (tamaño de Australia)
 
-**Causas Principales:**
-- Volcanism masivo en Siberia (Traps Siberianos)
-- Cambio climático drástico
-- Emisiones de dióxido de carbono y ácido sulfúrico
-- Anoxia oceánica (ausencia de oxígeno)
-- Posible impacto de asteroide
+**Efectos directos:**
+- Emisiones masivas de CO₂: aumentó concentraciones atmosféricas 2.000-3.000 ppm
+- Liberación de SO₂: causó lluvia ácida global durante décadas
+- Emisión de gases halógenos que destruyeron la capa de ozono
+- Cenizas volcánicas bloquearon la luz solar temporalmente`
+      },
+      {
+        title: 'Calentamiento Global Extremo',
+        description: 'Incremento de temperatura global de +5 a +8°C (algunos estudios sugieren hasta +10°C en el pico). Temperaturas ecuatoriales alcanzando 40-50°C. Océanos sobrecalentados, especialmente en superficie. Evaporación masiva que aumentó la humedad atmosférica. Retroalimentación positiva: más vapor de agua = más calentamiento.'
+      },
+      {
+        title: 'Acidificación Oceánica Masiva',
+        description: 'El CO₂ atmosférico se disolvió en los océanos. pH oceánico bajó drásticamente. Organismos con conchas de carbonato de calcio no podían formar sus esqueletos. Colapso de la capacidad de calcificación marina.'
+      },
+      {
+        title: 'Anoxia Oceánica Global',
+        description: 'Los océanos perdieron su oxígeno disuelto. Océanos estratificados: agua caliente arriba, agua fría abajo, sin mezcla. Zonas anóxicas se expandieron desde las profundidades hacia aguas superficiales. Liberación de sulfuro de hidrógeno (H₂S) tóxico desde fondos marinos. El H₂S alcanzó la atmósfera, siendo venenoso para la vida terrestre.'
+      },
+      {
+        title: 'Liberación de Metano de Hidratos',
+        description: 'El calentamiento oceánico liberó metano (CH₄) congelado en los fondos marinos. El metano es un gas de efecto invernadero 25 veces más potente que el CO₂. Retroalimentación catastrófica: más calor → más metano liberado → más calor.'
+      },
+      {
+        title: 'Colapso de la Capa de Ozono',
+        description: 'Gases volcánicos destruyeron parcialmente la capa de ozono. Radiación ultravioleta letal alcanzó la superficie terrestre. Daño al ADN de organismos terrestres y marinos superficiales.'
+      },
+      {
+        title: 'Posibles Causas Adicionales',
+        description: 'Posible impacto de asteroide en la Antártida (Wilkes Land) - evidencia controvertida. Posible explosión de supernova cercana - hipótesis especulativa. Estos serían factores contribuyentes, no causas principales.'
+      }
+    ],
+    affected: [
+      {
+        group: 'TRILOBITES - EXTINCIÓN TOTAL',
+        impact: 'Después de sobrevivir 270 millones de años y dos extinciones masivas previas, los trilobites finalmente desaparecieron por completo. Uno de los grupos animales más exitosos de todos los tiempos se extinguió. Nunca más volvieron a existir.'
+      },
+      {
+        group: 'Vida Marina (96% de especies)',
+        impact: 'Euriptéridos (escorpiones marinos) - EXTINCIÓN TOTAL. Blastoideos - EXTINCIÓN TOTAL. Fusulínidos (foraminíferos gigantes) - EXTINCIÓN TOTAL. Braquiópodos: solo 4% de especies sobrevivieron. Briozoos: 79% de géneros extintos. Crinoideos: solo 1 de cada 10 géneros sobrevivió. Amonites: reducidos a 2-3 especies (de cientos). Corales rugosos y tabulados - EXTINCIÓN TOTAL. Arrecifes de coral colapsaron completamente.'
+      },
+      {
+        group: 'Vida Terrestre (70% de especies)',
+        impact: 'Sinápsidos (reptiles mamiferoides) dominantes: casi extinción completa. Gorgonópsidos (depredadores con dientes de sable) - EXTINCIÓN TOTAL. Dinocefalios - EXTINCIÓN TOTAL. Grandes anfibios - mayormente extintos. Insectos: 83% de órdenes extintos (única extinción masiva de insectos en la historia). Reptiles pareiasaurios - EXTINCIÓN TOTAL. Plantas: grandes bosques de licófitas colapsaron.'
+      },
+      {
+        group: 'Ecosistemas Completos',
+        impact: 'Cerca de 57% de todas las familias biológicas desaparecieron. 83% de todos los géneros se extinguieron. Los ecosistemas terrestres y marinos colapsaron completamente. Cadenas alimenticias destruidas. Ciclos biogeoquímicos alterados fundamentalmente.'
+      }
+    ],
+    survivors: `**Los pocos supervivientes:**
 
-**Efectos:**
-- 96% de las especies marinas extintas
-- 70% de las especies de vertebrados terrestres extintas
-- Colapso total de los ecosistemas
-- Casi extinción de toda la vida en la Tierra
-- Denominada "La Gran Mortandad"
+**En el mar:**
+- Algunos amonites (2-3 especies supervivientes)
+- Pocos braquiópodos de aguas profundas
+- Algunos moluscos bivalvos
+- Peces óseos resistentes
+- Tiburones primitivos
 
-**Recuperación:**
-- Tardó millones de años
-- Permitió la diversificación de reptiles
-- Base para la era de los dinosaurios`,
+**En tierra:**
+- **Lystrosaurus:** Pequeño herbívoro terapsido que llegó a representar el 90% de los vertebrados terrestres durante los primeros millones de años del Triásico
+- Algunos cinodontes (ancestros directos de los mamíferos)
+- Algunos arcosaurios primitivos (ancestros de dinosaurios y cocodrilos)
+- Pocos reptiles pequeños
+- Algunos insectos resistentes
+
+**Característica común de supervivientes:** Generalmente eran pequeños, generalistas en dieta, capaces de refugiarse (madrigueras, grietas), con metabolismos que toleraban bajo oxígeno.`,
+    context: `**El mundo antes de la extinción:**
+
+El Pérmico Tardío tenía ecosistemas complejos y diversos:
+
+**En tierra:**
+- Sinápsidos (reptiles mamiferoides) dominaban: herbívoros como Dicynodontes, depredadores como Gorgonópsidos
+- Dinocefalios gigantes
+- Grandes bosques de coníferas, helechos arbóreos y licófitas
+- Insectos diversos y abundantes
+- Reptiles diápsidos (ancestros de dinosaurios) comenzando a diversificarse
+
+**En el mar:**
+- Arrecifes de coral extensos
+- Trilobites en sus últimos millones de años
+- Amonites diversos
+- Peces cartilaginosos y óseos
+- Euriptéridos (escorpiones marinos)
+
+**El supercontinente Pangea** estaba completamente formado, creando un interior continental árido masivo.`,
+    recovery: `**El largo camino de recuperación:**
+
+**Período Temprano (~1-5 millones de años):**
+- "Carbonate gap": Ausencia de formación de carbonatos marinos durante 1-2 Ma
+- Océanos tóxicos con sulfuro de hidrógeno
+- Ecosistemas extremadamente simplificados
+- Dominio absoluto de Lystrosaurus en tierra (90% de vertebrados)
+- "Coal gap": Ausencia de formación de carbón por falta de bosques
+
+**Período Medio (~5-10 millones de años):**
+- Lenta recolonización de nichos ecológicos
+- Aparición de nuevos grupos de organismos
+- Primeros dinosaurios emergen (~230 Ma)
+- Primeros mamíferos verdaderos (~225 Ma)
+- Gradual regreso de ecosistemas complejos
+
+**Recuperación completa (~10-15 millones de años):**
+- Ecosistemas completamente reestructurados
+- Nuevos grupos dominantes (arcosaurios, dinosaurios)
+- Desaparición de grupos previamente dominantes (sinápsidos grandes)
+- Los arrecifes de coral no regresaron hasta el Triásico Medio (10+ Ma después)
+
+**La vida tardó más en recuperarse de esta extinción que de cualquier otra en la historia.**`,
+    importance: `**Lecciones fundamentales:**
+
+1. **Casi exterminio de la vida multicelular:** La extinción estuvo peligrosamente cerca de ser total. Si hubiera sido un 5-10% más severa, podría haber eliminado toda vida compleja.
+
+2. **Velocidad de cambio es crucial:** Los cambios ambientales ocurrieron más rápido de lo que la evolución podía responder. La adaptación tiene límites.
+
+3. **Retroalimentación catastrófica:** Los sistemas climáticos tienen puntos de no retorno. Una vez que ciertos procesos (liberación de metano, anoxia oceánica) comienzan, pueden auto-amplificarse incontrolablemente.
+
+4. **Resiliencia de la vida:** Incluso después de perder 96% de especies marinas y 70% terrestres, la vida se recuperó y diversificó. La vida es increíblemente tenaz.
+
+5. **Oportunidad en la catástrofe:** La extinción eliminó a los sinápsidos dominantes, permitiendo el ascenso de los arcosaurios y eventualmente los dinosaurios. Sin esta extinción, los dinosaurios nunca habrían dominado la Tierra.`,
+    modernLessons: `**Advertencias para el presente:**
+
+Los mecanismos de la extinción del Pérmico tienen paralelos inquietantes con el cambio climático actual:
+
+- **Emisiones de CO₂:** Actualmente emitimos CO₂ más rápido que durante los Traps Siberianos (aunque el volumen total es menor)
+- **Acidificación oceánica:** Ya está ocurriendo a ritmo acelerado
+- **Zonas muertas oceánicas:** Se están expandiendo en todos los océanos
+- **Calentamiento global:** +1.1°C desde era preindustrial, camino a +2-3°C
+- **Liberación de metano:** El permafrost ártico está derritiéndose, liberando metano
+- **Pérdida de biodiversidad:** Estamos en medio de la sexta extinción masiva
+
+La diferencia crítica: Los Traps Siberianos duraron millones de años. Nosotros estamos causando cambios comparables en apenas 200 años.
+
+**Pregunta urgente:** ¿Estamos desencadenando retroalimentaciones similares a las del Pérmico-Triásico?`,
   },
   'triasico-jurasico': {
     title: 'Extinción del Triásico-Jurásico',
-    description: 'El evento que permitió el dominio de los dinosaurios',
-    when: 'Hace aproximadamente 201 millones de años',
-    severity: '76% de todas las especies',
-    content: `La extinción del Triásico-Jurásico marcó la transición entre eras:
+    description: 'El evento que entregó la Tierra a los dinosaurios',
+    when: 'Hace 201.4 millones de años',
+    duration: '~1 millón de años (con pulsos principales en ~600.000 años)',
+    severity: '~75-80% de todas las especies, ~20% de familias marinas',
+    ranking: 'Cuarta o quinta más devastadora',
+    content: `La extinción del Triásico-Jurásico marcó el fin del Triásico y el comienzo de la Era Mesozoica propiamente dicha. Fue el evento que eliminó a los competidores de los dinosaurios, permitiéndoles convertirse en los vertebrados terrestres dominantes durante los siguientes 135 millones de años.`,
+    causes: [
+      {
+        title: 'Provincia Magmática del Atlántico Central (CAMP)',
+        description: `**Una de las mayores erupciones volcánicas de la historia:**
+- Duración: ~600.000 años de actividad volcánica intensa
+- Volumen de magma: ~2-3 millones de km³
+- Área cubierta: ~11 millones de km² (más grande que Canadá)
+- Ubicación: América del Norte, América del Sur, África, Europa (donde Pangea estaba fracturándose)
+- Coincide exactamente con el tiempo de la extinción
 
-**Causas Principales:**
-- Fragmentación del supercontinente Pangea
-- Volcanism masivo
-- Cambios en corrientes oceánicas
-- Posible impacto de asteroide
-- Cambios drásticos de temperatura
+**Efectos de CAMP:**
+- Emisiones masivas de CO₂: aumentó concentraciones de 1.000 a 2.000-3.000 ppm
+- Liberación de SO₂ causando lluvia ácida
+- Enfriamiento inicial por cenizas y aerosoles (invierno volcánico)
+- Calentamiento posterior por efecto invernadero de CO₂
+- Flujos de lava cubrieron vastas áreas, destruyendo ecosistemas directamente`
+      },
+      {
+        title: 'Fragmentación de Pangea',
+        description: 'El supercontinente Pangea comenzó a fragmentarse. Formación del rift que eventualmente crearía el Océano Atlántico. Cambios masivos en patrones de corrientes oceánicas. Alteración de climas regionales. Destrucción de hábitats durante la ruptura continental.'
+      },
+      {
+        title: 'Liberación de Metano',
+        description: 'El calentamiento causó liberación de hidratos de metano oceánicos. Retroalimentación positiva: más calor → más metano → más calor. Cambios isotópicos de carbono en rocas indican liberaciones masivas.'
+      },
+      {
+        title: 'Acidificación Oceánica',
+        description: 'Aumento de CO₂ atmosférico acidificó los océanos. pH oceánico bajó significativamente. Organismos calcáreos (con conchas) severamente afectados. Colapso de cadenas alimenticias marinas basadas en organismos con concha.'
+      },
+      {
+        title: 'Cambios Climáticos Drásticos',
+        description: 'Calentamiento global de +3 a +4°C. Temperaturas más extremas en el interior de Pangea. Posible aridez aumentada. Alteración de monzones y patrones de lluvia.'
+      },
+      {
+        title: 'Posibles Impactos de Asteroides',
+        description: 'Cráter Manicouagan (Canadá, 100 km diámetro) formado ~216 Ma - demasiado temprano. Cráter Rochechouart (Francia, 23 km diámetro) ~201 Ma - coincide temporalmente. Cráter Saint Martin (Canadá, 40 km diámetro) ~201 Ma - también coincide. Posibles impactos múltiples, pero su rol en la extinción es incierto y probablemente menor comparado con CAMP.'
+      }
+    ],
+    affected: [
+      {
+        group: 'Arcosaurios No-Dinosaurios',
+        impact: `**Grupos completos eliminados:**
+- Fitosaurios (reptiles parecidos a cocodrilos) - EXTINCIÓN TOTAL
+- Rauisuquios (grandes depredadores cuadrúpedos) - EXTINCIÓN TOTAL
+- Aetosaurios (herbívoros acorazados) - EXTINCIÓN TOTAL
+- Ornithosúquidos - EXTINCIÓN TOTAL
 
-**Efectos:**
-- 76% de todas las especies extintas
-- Colapso de los reptiles sinapsidos dominantes
-- Extinción de muchos anfibios y reptiles madrugadores
-- Supervivencia de dinosaurios pequeños
-- Sobrevivencia de primeros mamíferos
+Estos eran los arcosaurios dominantes del Triásico. Los dinosaurios eran relativamente raros y pequeños en comparación.`
+      },
+      {
+        group: 'Terápsidos (Reptiles Mamiferoides)',
+        impact: 'Casi extinción total de los pocos grupos supervivientes del Pérmico. Solo algunos cinodontes pequeños sobrevivieron. Estos supervivientes eventualmente evolucionarían en los mamíferos verdaderos.'
+      },
+      {
+        group: 'Conodontes',
+        impact: 'EXTINCIÓN TOTAL. Estos pequeños animales marinos con dientes mineralizados desaparecieron después de 300 millones de años de existencia.'
+      },
+      {
+        group: 'Rincosaurios',
+        impact: 'EXTINCIÓN TOTAL. Herbívoros parecidos a cerdos con picos córneos.'
+      },
+      {
+        group: 'Grandes Anfibios',
+        impact: 'La mayoría de anfibios grandes (temnospóndilos) se extinguieron. Solo sobrevivieron formas pequeñas.'
+      },
+      {
+        group: 'Vida Marina',
+        impact: 'Amonites: reducción masiva, solo unas pocas familias sobrevivieron. Bivalvos: muchas familias extintas. Braquiópodos: más reducciones. Reptiles marinos placodontos - EXTINCIÓN TOTAL. Foraminíferos: pérdida significativa de diversidad. ~20% de familias marinas extintas.'
+      },
+      {
+        group: 'Plantas Terrestres',
+        impact: 'No hubo extinción masiva de plantas, pero sí cambios significativos. Helechos se volvieron temporalmente dominantes ("spike de helechos"). Coníferas y cícadas supervivieron bien.'
+      }
+    ],
+    survivors: `**Los afortunados supervivientes:**
 
-**Recuperación:**
-- Diversificación masiva de dinosaurios en el Jurásico
-- Aumento del tamaño de los dinosaurios
-- Evolución de las primeras aves
-- Dominio de los dinosaurios durante 165 millones de años`,
+**Dinosaurios:**
+- Terópodos pequeños bípedos
+- Primeros saurópodos
+- Ornitisquios primitivos
+- Eran relativamente raros antes de la extinción
+
+**Mamíferos primitivos:**
+- Pequeños cinodontes
+- Nocturnos, insectívoros
+- Permanecieron en roles ecológicos marginales
+
+**Reptiles que prosperaron:**
+- Cocodrilomorfos (ancestros de cocodrilos)
+- Tortugas primitivas
+- Lepidosaurios (ancestros de lagartos y serpientes)
+- Pterosaurios (reptiles voladores)
+
+**Reptiles marinos:**
+- Ictiosaurios (sobrevivieron bien)
+- Plesiosaurios (continuaron evolucionando)
+
+**Peces:**
+- Tiburones
+- Peces óseos
+- Celacantos
+
+**Invertebrados resistentes:**
+- Insectos (poco afectados)
+- Arañas y escorpiones
+- Gasterópodos
+- Algunos moluscos bivalvos`,
+    context: `**El Triásico antes de la extinción:**
+
+El Triásico era un mundo en recuperación del catastrófico evento Pérmico-Triásico:
+
+**Composición de vertebrados terrestres:**
+- 40-50% Arcosaurios no-dinosaurios (fitosaurios, rauisuquios, aetosaurios)
+- 20-30% Terápsidos supervivientes
+- 10-15% Dinosaurios (relativamente raros)
+- 10-15% Grandes anfibios
+- 5-10% Mamíferos primitivos
+
+**Los dinosaurios del Triásico eran:**
+- Generalmente pequeños (1-5 metros)
+- Menos diversos que otros grupos
+- Principalmente carnívoros bípedos
+- Sin los gigantes icónicos del Jurásico/Cretácico
+- Ejemplos: Coelophysis, Herrerasaurus, Plateosaurus
+
+**Pangea todavía existía:**
+- Interior continental árido y extremo
+- Monzones estacionales intensos
+- Sin barreras oceánicas entre continentes
+- Flora dominada por coníferas, cícadas, helechos`,
+    recovery: `**El amanecer de la Era de los Dinosaurios:**
+
+**Primeros 5-10 millones de años (Jurásico Temprano):**
+- "Spike de helechos" global: dominio temporal de helechos pioneros
+- Recuperación gradual de ecosistemas
+- Dinosaurios comenzaron a diversificarse rápidamente
+- Expansión de dinosaurios herbívoros (saurópodos)
+- Incremento en tamaños corporales
+
+**10-20 millones de años:**
+- Dinosaurios se convirtieron en los vertebrados terrestres dominantes
+- Surgimiento de formas gigantes:
+  - Saurópodos de cuello largo >15 metros
+  - Terópodos depredadores grandes
+- Diversificación de estegosaurios y otros ornitisquios
+- Aparición de las primeras aves (evolución desde terópodos)
+
+**Consecuencias a largo plazo:**
+- Dinosaurios dominaron durante 135 millones de años siguientes
+- Mamíferos permanecieron pequeños y nocturnos
+- Pterosaurios dominaron los cielos
+- Reptiles marinos gigantes llenaron los océanos
+- Este fue el comienzo verdadero de la "Era Mesozoica" clásica
+
+**¿Por qué los dinosaurios prosperaron?**
+Teorías:
+1. **Fisiología superior:** Posiblemente sangre caliente o metabolismo intermedio
+2. **Postura erecta:** Piernas bajo el cuerpo (más eficiente que reptiles con patas laterales)
+3. **Respiración eficiente:** Sistema respiratorio con sacos aéreos (como aves modernas)
+4. **Suerte:** Estaban en el lugar correcto en el momento correcto`,
+    importance: `**Significado histórico:**
+
+1. **Redefinió el dominio terrestre:** Los dinosaurios, que eran un grupo menor, se convirtieron en los vertebrados dominantes. Este es un ejemplo perfecto de cómo las extinciones masivas reorganizan completamente los ecosistemas.
+
+2. **Eliminó competencia:** Sin los grandes arcosaurios no-dinosaurios y terápsidos, los dinosaurios no tenían competidores serios para nichos de grandes herbívoros y carnívoros.
+
+3. **Preparó el escenario para 135 millones de años:** Todo lo que conocemos del Mesozoico - T. rex, Triceratops, Brachiosaurus - solo fue posible gracias a esta extinción.
+
+4. **Consecuencias para mamíferos:** Los mamíferos permanecieron pequeños y marginales durante todo el Mesozoico. Sin esta extinción, los mamíferos pudieron haber evolucionado de manera muy diferente.
+
+5. **Fragmentación de Pangea:** El comienzo de la ruptura continental llevó eventualmente a la biodiversidad geográfica del Mesozoico y Cenozoico.`,
+    modernLessons: `**Lecciones contemporáneas:**
+
+Esta extinción ilustra que:
+
+1. **Las erupciones volcánicas masivas son mortales:** CAMP liberó CO₂ durante cientos de miles de años. Las emisiones humanas actuales están ocurriendo aún más rápido.
+
+2. **La acidificación oceánica es devastadora:** Los organismos marinos con conchas fueron severamente afectados. Actualmente, los océanos están acidificándose 10 veces más rápido que en cualquier momento de los últimos 300 millones de años.
+
+3. **Las oportunidades surgen del desastre:** Los dinosaurios eran un grupo menor que se benefició de la extinción. En la sexta extinción actual, ¿qué grupos podrían heredar la Tierra?
+
+4. **Los cambios geológicos mayores tienen consecuencias biológicas:** La fragmentación de continentes altera climas y ecosistemas globalmente.`,
   },
   'cretacico-paleogeno': {
-    title: 'Extinción del Cretácico-Paleógeno',
-    description: 'El impacto que cambió todo',
-    when: 'Hace aproximadamente 66 millones de años',
-    severity: 'Extinción de los dinosaurios',
-    content: `La extinción del Cretácico-Paleógeno es la extinción más estudiada y documentada:
+    title: 'Extinción del Cretácico-Paleógeno (K-Pg)',
+    description: 'El día que los dinosaurios murieron',
+    when: 'Hace 66.043 millones de años',
+    duration: 'Evento catastrófico súbito + efectos prolongados durante décadas/siglos',
+    severity: '~75% de todas las especies (incluyendo TODOS los dinosaurios no avianos)',
+    ranking: 'Tercera o cuarta más devastadora',
+    content: `La extinción del Cretácico-Paleógeno (anteriormente Cretácico-Terciario o K-T) es la extinción masiva más famosa y mejor estudiada de la historia. Marca el fin de la Era Mesozoica y el final definitivo del reinado de los dinosaurios tras 165 millones de años de dominio. Es la única extinción masiva cuya causa principal se conoce con certeza absoluta: el impacto de un asteroide masivo.`,
+    causes: [
+      {
+        title: 'Impacto del Asteroide de Chicxulub - LA CAUSA PRINCIPAL',
+        description: `**El día que cambió todo:**
 
-**Causas Principales:**
-- Impacto de asteroide de 10 km de diámetro en Yucatán, México
-- Volcanism contemporáneo en los Deccan Traps (India)
-- Erupciones volcánicas extensas
-- Invierno de impacto - oscuridad y frío extremo
-- Cambios químicos en la atmósfera
+**Características del impacto:**
+- Fecha precisa: Hace 66.043 millones de años
+- Ubicación: Península de Yucatán, México (hoy bajo el Golfo de México)
+- Tamaño del asteroide: ~10-15 km de diámetro
+- Velocidad: ~20 km/segundo
+- Ángulo: ~60° (casi el peor ángulo posible para máximo daño)
+- Energía liberada: Equivalente a 100-300 millones de megatones de TNT
+- Comparación: 10 mil millones de veces más potente que la bomba de Hiroshima
+- Diámetro del cráter: ~180 km (uno de los mayores de la Tierra)
+- Profundidad inicial: ~20-30 km
 
-**Efectos:**
-- Extinción de todos los dinosaurios no aviares
-- Extinción de muchos reptiles marinos (mosasaurios, ictiosaurios)
-- Extinción de muchos mamíferos
-- Explosión de destrucción generalizada
+**Los primeros segundos:**
+- El asteroide penetró completamente la corteza terrestre
+- Vaporizó rocas instantáneamente, creando plasma a millones de grados
+- Onda de choque expandiéndose a velocidad supersónica
+- Eyección de ~25.000 km³ de roca vaporizada y fundida
+- Formación de un cráter temporal de ~100 km de profundidad que colapsó inmediatamente
+- Terremoto de magnitud 11+ (mayor que cualquier terremoto registrado)
+
+**Los primeros minutos:**
+- Tsunamis masivos en el Golfo de México: olas de 100+ metros de altura
+- Material eyectado alcanzó el espacio exterior
+- Bolas de fuego atmosféricas globales
+- Incendios forestales comenzaron en un radio de cientos de kilómetros
+
+**Las primeras horas:**
+- Material eyectado comenzó a caer por todo el planeta
+- Reentrada atmosférica de escombros incandescentes calentó la atmósfera global
+- Incendios forestales globales simultáneos
+- Pulso de calor radiante que asó animales a cielo abierto
+- El cielo se volvió rojo ardiente globalmente
+- Temperatura del aire aumentó a 100-200°C por horas
+- Cualquier animal grande expuesto en superficie fue literalmente cocinado vivo
+
+**Los primeros días:**
+- Polvo, cenizas y hollín bloquearon el 99% de la luz solar
+- Oscuridad total global (no luz del día durante meses)
+- Temperaturas superficiales cayeron drásticamente ("invierno de impacto")
+- Fotosíntesis se detuvo completamente
+- Lluvia ácida global (pH ~0-1 en algunos lugares)
+- Lluvia de ácido nítrico por nitrógeno atmosférico oxidado
+- Lluvia de ácido sulfúrico por azufre vaporizado de rocas
+- Océanos superficiales comenzaron a acidificarse rápidamente
+
+**Las primeras semanas/meses:**
+- Oscuridad continua
+- Temperaturas globales cayeron ~10-20°C
 - Colapso de cadenas alimenticias
+- Plantas murieron masivamente
+- Herbívoros murieron de hambre
+- Carnívoros murieron sin presas
+- Ecosistemas marinos superficiales colapsaron
 
-**Recuperación:**
-- Explosión adaptativa de mamíferos en el Cenozoico
-- Evolución de la fauna moderna
-- Diversificación de aves modernas
-- Base para la evolución de primates y humanos
-- El evento más famoso en la historia de la Tierra`,
+**Los primeros años:**
+- Gradual regreso de la luz solar (6 meses - 2 años)
+- Pero seguido de calentamiento extremo por CO₂ y vapor de agua residuales
+- "Verano de impacto": temperaturas +5-10°C por décadas
+- Ecosistemas devastados incapaces de recuperarse rápidamente`
+      },
+      {
+        title: 'Traps del Decán (India) - Factor Contribuyente',
+        description: `**Erupciones volcánicas masivas simultáneas:**
+
+- Ubicación: India occidental (Meseta del Decán)
+- Duración total: ~1 millón de años antes y después del impacto
+- Pico de actividad: Justo alrededor del tiempo del impacto de Chicxulub
+- Volumen: ~1 millón de km³ de lava
+- Área cubierta: ~500.000 km²
+
+**Efectos de los Traps del Decán:**
+- Emisiones masivas de SO₂ causando lluvia ácida
+- Liberación de CO₂ contribuyendo al calentamiento
+- Posiblemente debilitaron ecosistemas antes del impacto
+- Intensificación de erupciones posiblemente causada por ondas sísmicas del impacto de Chicxulub
+
+**Debate científico:**
+- ¿Los Traps del Decán habrían causado extinción masiva sin el impacto?
+- Consenso actual: El impacto fue la causa principal, los Traps contribuyeron pero no fueron suficientes solos
+- Algunos científicos argumentan que los ecosistemas ya estaban estresados por vulcanismo`
+      }
+    ],
+    affected: [
+      {
+        group: 'DINOSAURIOS NO AVIANOS - EXTINCIÓN TOTAL',
+        impact: `**Todos desaparecieron:**
+
+**Grandes herbívoros:**
+- Hadrosaurios (dinosaurios pico de pato): Edmontosaurus, Parasaurolophus - EXTINTOS
+- Ceratópsidos (con cuernos): Triceratops, Torosaurus - EXTINTOS
+- Anquilosaurios (acorazados): Ankylosaurus - EXTINTOS
+- Paquicefalosaurios (cabeza dura) - EXTINTOS
+- Saurópodos (cuello largo) titanosaurios - EXTINTOS
+
+**Grandes carnívoros:**
+- Tiranosáuridos: Tyrannosaurus rex - EXTINTO
+- Dromaeosaurios: Velociraptores, Deinonychus - EXTINTOS
+- Troodóntidos - EXTINTOS
+
+**Todos los dinosaurios grandes, medianos y pequeños no avianos desaparecieron completamente.**
+
+El grupo animal terrestre más exitoso de todos los tiempos (165 millones de años de dominio) se extinguió en un instante geológico.`
+      },
+      {
+        group: 'Reptiles Marinos - EXTINCIÓN TOTAL',
+        impact: `**Los océanos perdieron sus grandes depredadores:**
+- Mosasaurios (hasta 17 m) - EXTINCIÓN TOTAL
+- Plesiosaurios de cuello largo (hasta 15 m) - EXTINCIÓN TOTAL
+- Pliosaurios - EXTINCIÓN TOTAL
+
+Estos reptiles marinos gigantes habían dominado los océanos durante el Mesozoico. Todos desaparecieron.`
+      },
+      {
+        group: 'Pterosaurios - EXTINCIÓN TOTAL',
+        impact: 'Quetzalcoatlus (10-12 m envergadura, el animal volador más grande de todos los tiempos) - EXTINTO. Pteranodon - EXTINTO. TODOS los pterosaurios (reptiles voladores) desaparecieron completamente después de 160 millones de años dominando los cielos.'
+      },
+      {
+        group: 'Amonites - EXTINCIÓN TOTAL',
+        impact: 'Después de sobrevivir múltiples extinciones masivas durante 350 millones de años, los amonites (moluscos cefalópodos con conchas espirales) finalmente desaparecieron por completo. Habían sobrevivido el Pérmico, el Triásico-Jurásico, pero no esto.'
+      },
+      {
+        group: 'Vida Marina',
+        impact: 'Foraminíferos planctónicos: ~90% de especies extintas. Bivalvos rudistas (constructores de arrecifes) - EXTINCIÓN TOTAL. Belemnites (moluscos parecidos a calamares) - EXTINCIÓN TOTAL. Muchos tiburones y rayas - extintas. Peces óseos: reducciones significativas.'
+      },
+      {
+        group: 'Plantas',
+        impact: 'En América del Norte: ~60% de especies de plantas extintas. Flora global: ~15-30% de especies extintas. Helechos particularmente afectados inicialmente. Bosques completamente quemados en continentes occidentales.'
+      },
+      {
+        group: 'Mamíferos',
+        impact: 'Todos los mamíferos >25 kg extintos. Aproximadamente 75% de especies de mamíferos pequeños extintas. Solo sobrevivieron los más pequeños (<5 kg).'
+      },
+      {
+        group: 'Cocodrilos, Tortugas, Lagartos',
+        impact: 'Muchos grupos extintos, pero algunos sobrevivieron. Los supervivientes eran generalmente semiacuáticos o capaces de refugiarse.'
+      }
+    ],
+    survivors: `**¿Quién sobrevivió y por qué?**
+
+**AVES (Dinosaurios Avianos):**
+- Los únicos dinosaurios que sobrevivieron
+- Principalmente aves pequeñas terrestres que podían refugiarse
+- Aves acuáticas que se alimentaban de organismos acuáticos
+- Capacidad de volar permitió encontrar recursos escasos
+- Se diversificarían explosivamente en el Cenozoico
+
+**MAMÍFEROS:**
+- Solo los pequeños (<5 kg)
+- Nocturnos, capaces de madrigueras
+- Omnívoros (dieta flexible)
+- Metabolismo que podía sobrevivir con poco alimento
+- Incluían ancestros de todos los mamíferos modernos
+
+**COCODRILOS:**
+- Semi-acuáticos
+- Metabolismo bajo (pueden sobrevivir meses sin comer)
+- Capaces de refugiarse bajo agua
+- Se alimentaban de carroña
+
+**TORTUGAS:**
+- Protección de caparazón
+- Metabolismo bajo
+- Algunas especies acuáticas, otras terrestres
+- Dieta flexible
+
+**LAGARTOS Y SERPIENTES:**
+- Pequeños
+- Capaces de refugiarse
+- Metabolismo bajo
+- Dieta flexible
+
+**TIBURONES:**
+- Algunos sobrevivieron
+- Carroñeros oportunistas
+- Capaces de aguas profundas
+
+**PECES ÓSEOS:**
+- Muchos grupos sobrevivieron
+- Especialmente especies de agua dulce
+- Menos dependientes de fitoplancton que especies oceánicas
+
+**ANFIBIOS:**
+- Muchos sobrevivieron
+- Semi-acuáticos
+- Ciclos de vida complejos
+- Huevos en agua protegidos
+
+**INVERTEBRADOS:**
+- Insectos: mayoría sobrevivió (altamente resistentes)
+- Arañas, escorpiones: sobrevivieron bien
+- Moluscos de agua dulce: menos afectados
+- Gasterópodos terrestres: supervivientes
+
+**PLANTAS:**
+- Semillas y esporas resistentes
+- Helechos se recuperaron rápidamente
+- Angiospermas sobrevivieron mejor que gimnospermas
+- Plantas con bancos de semillas subterráneas
+
+**Patrón común de supervivientes:**
+1. **Pequeño tamaño** (<25 kg para vertebrados)
+2. **Capaces de refugiarse** (madrigueras, agua, cuevas)
+3. **Dieta flexible/omnívora**
+4. **Metabolismo bajo/eficiente**
+5. **Ciclos de vida que no dependían de recursos inmediatos**
+6. **No completamente dependientes de fotosíntesis activa**`,
+    context: `**El Cretácico Tardío antes del impacto:**
+
+El mundo del Cretácico era un paraíso para los dinosaurios:
+
+**En tierra:**
+- Dinosaurios en su máxima diversidad
+- T. rex cazando manadas de Triceratops y Edmontosaurus
+- Bosques de angiospermas (plantas con flores)
+- Insectos polinizadores modernos
+- Mamíferos pequeños y nocturnos
+- Climas cálidos sin hielo polar
+
+**En el mar:**
+- Mosasaurios gigantes como superdepredadores
+- Plesiosaurios cazando peces
+- Tiburones y rayas diversos
+- Amonites abundantes
+
+**En el aire:**
+- Pterosaurios gigantes (Quetzalcoatlus)
+- Aves primitivas diversificándose
+- Insectos voladores abundantes
+
+Era un mundo maduro, estable y altamente diverso que había existido así por decenas de millones de años.`,
+    recovery: `**La lenta recuperación:**
+
+**Los primeros años (0-10 años):**
+- Paisaje desolado, plantas muertas
+- Dominio de hongos descomponedores ("spike de hongos")
+- Carroñeros prosperaron temporalmente
+- Supervivientes se alimentaban de carroña y detritos
+
+**Las primeras décadas (10-100 años):**
+- Helechos recolonizaron rápidamente ("spike de helechos")
+- Plantas con semillas resistentes comenzaron a germinar
+- Insectos y pequeños vertebrados se recuperaron
+- Ecosistemas extremadamente simplificados
+
+**Los primeros siglos/milenios (100-10.000 años):**
+- Bosques comenzaron a regenerarse
+- Herbívoros pequeños se diversificaron
+- Carnívoros pequeños siguieron
+- Mamíferos comenzaron expansión de tamaños
+
+**Los primeros 100.000 años:**
+- Ecosistemas básicos re-establecidos
+- Mamíferos alcanzaron tamaños medianos (perro grande)
+- Aves se diversificaron rápidamente
+- Flora recuperada pero composición diferente
+
+**1-3 millones de años:**
+- Mamíferos alcanzaron tamaños grandes
+- Primeros mamíferos verdaderamente gigantes (~Paleoceno tardío)
+- Aves modernas reconocibles
+- Ecosistemas complejos re-establecidos
+
+**10 millones de años:**
+- Recuperación completa de diversidad
+- Mamíferos ocuparon todos los nichos previamente ocupados por dinosaurios
+- El mundo Cenozoico moderno tomó forma
+
+**La paradoja:** Los mamíferos prosperaron explosivamente después de 150 millones de años viviendo en la sombra de los dinosaurios. En 10 millones de años, había mamíferos del tamaño de rinocerontes.`,
+    importance: `**Significado profundo:**
+
+1. **Fin de una era:** Los dinosaurios habían dominado durante 165 millones de años. Su reinado terminó en un solo día catastrófico.
+
+2. **Los mamíferos heredaron la Tierra:** Nosotros existimos solo porque este asteroide impactó. Si el asteroide hubiera pasado de largo, los dinosaurios probablemente seguirían dominando y los mamíferos seguirían siendo pequeños y nocturnos.
+
+3. **Las aves son dinosaurios vivientes:** Los dinosaurios no se extinguieron realmente. Las aves modernas son dinosaurios terópodos que sobrevivieron. Hay más especies de dinosaurios avianos hoy (~10.000 especies de aves) que especies de mamíferos (~5.500).
+
+4. **Importancia del azar:** El asteroide cayó en uno de los peores lugares posibles - rocas cargadas de azufre que vaporizaron y crearon lluvia ácida masiva. Si hubiera caído en océano profundo, el impacto habría sido menos severo.
+
+5. **Vulnerabilidad de lo grande:** Los grandes murieron; los pequeños sobrevivieron. El tamaño es una desventaja durante crisis globales.
+
+6. **La vida es resiliente pero vulnerable:** La vida se recuperó, pero la composición fue completamente diferente. Los ecosistemas fueron redefinidos totalmente.`,
+    modernLessons: `**Advertencias para nuestra era:**
+
+1. **Los impactos de asteroides son una amenaza real:** La Tierra es bombardeada constantemente. Asteroides de 10+ km impactan cada ~100 millones de años en promedio. El próximo podría llegar en cualquier momento.
+
+2. **Vigilancia espacial es crucial:** A diferencia de los dinosaurios, nosotros podemos detectar asteroides peligrosos. Actualmente rastreamos ~95% de asteroides >1 km. Misiones como DART están probando deflexión de asteroides.
+
+3. **Los humanos somos vulnerables:** Una civilización tecnológica global es altamente vulnerable a colapso de cadenas de suministro, agricultura, etc. Un impacto similar hoy causaría colapso civilizatorio.
+
+4. **El tamaño importa:** Los humanos somos grandes (comparado con mamíferos supervivientes de K-Pg). Requerimos mucha comida. En una crisis global de fotosíntesis, estaríamos en grave peligro.
+
+5. **No es solo ciencia ficción:** Esto realmente sucedió. Puede volver a suceder. Es solo cuestión de tiempo.
+
+**La buena noticia:** Somos la primera especie en la historia de la Tierra capaz de detectar y potencialmente prevenir nuestra propia extinción por impacto de asteroide.`,
+    legacy: 'La extinción K-Pg cambió todo. Sin ella, no habría mamíferos grandes, ni primates, ni humanos, ni civilización. Es el evento más importante en nuestra historia evolutiva porque hizo posible nuestra existencia. Recordamos a los dinosaurios con asombro, pero su extinción fue nuestra oportunidad.',
   },
 };
 
@@ -152,27 +846,157 @@ if (!current) {
 ---
 
 <StarlightPage frontmatter={{ title: current.title, description: current.description }}>
-  <p><strong>Cuándo:</strong> {current.when}</p>
-  <p><strong>Severidad:</strong> {current.severity}</p>
+  <div class="extinction-header">
+    <p><strong>Cuándo:</strong> {current.when}</p>
+    <p><strong>Duración:</strong> {current.duration}</p>
+    <p><strong>Severidad:</strong> {current.severity}</p>
+    <p><strong>Ranking:</strong> {current.ranking}</p>
+  </div>
   
   <section>
-    <h2>Detalles</h2>
-    {current.content.split('\n\n').map((paragraph: string) => (
-      <p>{paragraph}</p>
-    ))}
+    <h2>Descripción General</h2>
+    <p>{current.content}</p>
   </section>
   
-  <p><a href="/extinctions/">← Volver a Extinciones Masivas</a></p>
+  {current.causes && (
+    <section>
+      <h2>Causas Principales</h2>
+      {current.causes.map((cause: any) => (
+        <div class="cause-block">
+          <h3>{cause.title}</h3>
+          <div set:html={cause.description.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+        </div>
+      ))}
+    </section>
+  )}
+  
+  {current.affected && (
+    <section>
+      <h2>Grupos Más Afectados</h2>
+      {current.affected.map((group: any) => (
+        <div class="affected-block">
+          <h3>{group.group}</h3>
+          <div set:html={group.impact.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+        </div>
+      ))}
+    </section>
+  )}
+  
+  {current.survivors && (
+    <section>
+      <h2>Supervivientes</h2>
+      <div set:html={current.survivors.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.context && (
+    <section class="context-section">
+      <h2>Contexto Histórico</h2>
+      <div set:html={current.context.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.recovery && (
+    <section>
+      <h2>Recuperación y Consecuencias</h2>
+      <div set:html={current.recovery.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.importance && (
+    <section class="importance-section">
+      <h2>Importancia Histórica</h2>
+      <div set:html={current.importance.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.modernLessons && (
+    <section class="lessons-section">
+      <h2>Lecciones para el Presente</h2>
+      <div set:html={current.modernLessons.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.legacy && (
+    <section class="legacy-section">
+      <h2>Legado</h2>
+      <p>{current.legacy}</p>
+    </section>
+  )}
+  
+  <div class="navigation">
+    <a href="/extinctions/">← Volver a Extinciones Masivas</a>
+  </div>
 </StarlightPage>
 
 <style>
-  a {
+  .extinction-header {
+    background: rgba(var(--sl-color-accent-low), 0.3);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--sl-color-accent);
+  }
+
+  .extinction-header p {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  section h2 {
+    color: var(--sl-color-accent);
+    border-bottom: 2px solid var(--sl-color-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    line-height: 1.8;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  .cause-block, .affected-block, .context-section, .importance-section, .lessons-section, .legacy-section {
+    background: rgba(var(--sl-color-accent-low), 0.06);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.25rem 0;
+    border-left: 4px solid var(--sl-color-accent);
+    color: var(--sl-color-foreground);
+  }
+
+  .cause-block h3, .affected-block h3 {
+    color: var(--sl-color-accent);
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .current-era {
+    background: var(--sl-color-accent-low);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--sl-color-accent);
+  }
+
+  .navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+
+  .navigation a {
     color: var(--sl-color-accent);
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.1rem;
   }
-  
-  a:hover {
+
+  .navigation a:hover {
     text-decoration: underline;
   }
 </style>
