@@ -24,142 +24,509 @@ const eraData: Record<string, any> = {
     title: 'Hádico',
     description: 'La era más antigua de la Tierra',
     years: '4.600 - 4.000 millones de años',
-    content: `El Hádico es la era más antigua y misteriosa de la Tierra:
-    
-- Formación de la Tierra hace 4.600 millones de años
-- Primeros océanos en formación
-- Gran cantidad de impactos de meteoritos
-- La Luna se formó probablemente durante esta era
-- Condiciones extremas e inhóspitas
-- Posible origen de la vida al final del período`,
+    duration: '600 millones de años',
+    eon: 'Precámbrico',
+    content: `El Hádico (o Hadeano) es el eón más antiguo de la historia de la Tierra, llamado así por Hades, el inframundo griego, debido a las condiciones infernales que existían.`,
+    characteristics: [
+      'Formación de la Tierra hace aproximadamente 4.600 millones de años a partir de la nebulosa solar',
+      'Impacto masivo que formó la Luna (Theia) hace ~4.500 millones de años',
+      'Superficie completamente fundida inicialmente (océano de magma)',
+      'Bombardeo intenso de meteoritos y asteroides',
+      'Gradual solidificación de la corteza terrestre primitiva',
+      'Formación de los primeros océanos al condensarse el vapor de agua',
+      'Atmósfera primitiva compuesta de vapor de agua, CO₂, nitrógeno y metano',
+      'Ausencia total de oxígeno libre',
+      'Temperaturas superficiales extremadamente altas (>200°C)',
+      'Intensa actividad volcánica global',
+      'Formación del núcleo y manto terrestres por diferenciación'
+    ],
+    life: 'No hay evidencia confirmada de vida. Posiblemente existían moléculas orgánicas complejas y aminoácidos. Algunos científicos proponen que la vida pudo haber surgido hacia el final del Hádico.',
+    importance: 'El Hádico estableció las condiciones químicas y físicas básicas que eventualmente permitirían la aparición de la vida.',
   },
   eoarcaico: {
     title: 'Eoarcaico',
-    description: 'El comienzo del Arcaico',
+    description: 'El amanecer del Arcaico - Primeros indicios de vida',
     years: '4.000 - 3.600 millones de años',
-    content: `El Eoarcaico marca el inicio del Eón Arcaico:
-
-- Primeros indicios de vida (posiblemente microorganismos)
-- Formación de los primeros continentes primitivos
-- Océanos todavía muy calientes
-- Atmósfera sin oxígeno
-- Rocas más estables formándose
-- Primeras pruebas de agua líquida`,
+    duration: '400 millones de años',
+    eon: 'Arcaico',
+    content: `El Eoarcaico marca el inicio del Eón Arcaico y representa el momento en que la Tierra comenzó a estabilizarse tras el caótico período Hádico.`,
+    characteristics: [
+      'Solidificación completa de la corteza terrestre',
+      'Formación del primer supercontinente: Vaalbará',
+      'Rocas más antiguas conocidas: gneis de Acasta (Canadá, 4.030 Ma)',
+      'Cristales de circón más antiguos (Australia, 4.400 Ma) indican presencia de agua líquida',
+      'Océanos todavía muy calientes (60-70°C)',
+      'Atmósfera anóxica (sin oxígeno libre)',
+      'Alta concentración de gases de efecto invernadero',
+      'Intensa actividad volcánica',
+      'Bombardeo de meteoritos aún frecuente pero disminuyendo',
+      'Formación de las primeras cuencas oceánicas'
+    ],
+    life: 'Primeros indicios controvertidos de vida microbiana. Posibles bacterias anaeróbicas primitivas que obtenían energía de reacciones químicas (quimiosíntesis). Estructuras similares a estromatolitos en Groenlandia (3.700 Ma) sugieren actividad microbiana.',
+    fossils: 'Posibles microfósiles en rocas de Groenlandia, aunque su naturaleza biológica es debatida.',
+    importance: 'Representa la transición de un mundo caótico a uno donde la vida pudo emerger y establecerse.',
   },
   paleoarcaico: {
     title: 'Paleoarcaico',
-    description: 'La antigüedad antigua del Arcaico',
+    description: 'Establecimiento de las primeras formas de vida',
     years: '3.600 - 3.200 millones de años',
-    content: `El Paleoarcaico vio el desarrollo de estructuras geológicas tempranas:
-
-- Formación de los primeros cratones (núcleos estables continentales)
-- Vida microbiana bien establecida
-- Primeras bacterias fotosintéticas primitivas
-- Océanos aún dominan el planeta
-- Volcanes muy activos
-- Primeros ciclos de sedimentación`,
+    duration: '400 millones de años',
+    eon: 'Arcaico',
+    content: `El Paleoarcaico vio el establecimiento definitivo de la vida microbiana en los océanos primitivos de la Tierra.`,
+    characteristics: [
+      'Continuación de la formación del supercontinente Vaalbará',
+      'Formación de los primeros cratones estables (núcleos continentales rígidos)',
+      'Desarrollo de cuencas oceánicas más profundas',
+      'Rocas ígneas y metamórficas predominantes',
+      'Vulcanismo intenso que liberaba gases a la atmósfera',
+      'Ausencia de capa de ozono (alta radiación UV)',
+      'Océanos ricos en hierro disuelto',
+      'Temperatura oceánica promedio: ~50-55°C'
+    ],
+    life: 'Bacterias anaeróbicas firmemente establecidas. Primeras bacterias que realizaban fotosíntesis anoxigénica (sin producir oxígeno). Diversificación inicial de arqueas y bacterias. Comunidades microbianas formando tapetes y estructuras de estromatolitos.',
+    fossils: 'Estromatolitos en Sudáfrica y Australia occidental. Microfósiles de bacterias en formaciones de pedernal.',
+    importance: 'Las primeras formas de vida comenzaron a modificar la química de los océanos, preparando el camino para cambios atmosféricos futuros.',
   },
   mesoarcaico: {
     title: 'Mesoarcaico',
-    description: 'El Arcaico medio',
+    description: 'Desarrollo de la fotosíntesis primitiva',
     years: '3.200 - 2.800 millones de años',
-    content: `El Mesoarcaico representa la mitad del Eón Arcaico:
-
-- Desarrollo de cianobacterias fotosintéticas
-- Primeras pruebas de oxígeno siendo producido
-- Formación de depósitos de hierro bandeado
-- Continentes más grandes y consolidados
-- Ciclos geoquímicos más definidos
-- Evolución de bacterias más complejas`,
+    duration: '400 millones de años',
+    eon: 'Arcaico',
+    content: `El Mesoarcaico representa un período crucial donde las bacterias fotosintéticas comenzaron a transformar el planeta.`,
+    characteristics: [
+      'Fragmentación del supercontinente Vaalbará',
+      'Primera glaciación documentada en la historia de la Tierra (Pongola, ~2.900 Ma)',
+      'Formación de cinturones de rocas verdes (greenstone belts)',
+      'Actividad tectónica de placas primitiva',
+      'Depósitos de hierro bandeado (BIF) indican cambios en la química oceánica',
+      'Atmósfera aún carente de oxígeno libre pero con trazas iniciales'
+    ],
+    life: 'Desarrollo de cianobacterias primitivas que realizaban fotosíntesis oxigénica rudimentaria. El oxígeno producido era inmediatamente consumido por reacciones con hierro y azufre disueltos en el océano. Diversificación de comunidades microbianas. Posible evolución de metabolismos más complejos.',
+    fossils: 'Abundantes estromatolitos en varias partes del mundo. Microfósiles de bacterias filamentosas.',
+    importance: 'La evolución de la fotosíntesis oxigénica fue el evento más transformador en la historia de la vida, aunque sus efectos no serían visibles hasta el siguiente eón.',
   },
   neoarcaico: {
     title: 'Neoarcaico',
-    description: 'El Arcaico reciente',
+    description: 'Preparación para la Gran Oxidación',
     years: '2.800 - 2.500 millones de años',
-    content: `El Neoarcaico cierra el Eón Arcaico con cambios significativos:
-
-- Gran Oxidación hace 2.400 millones de años (inicio)
-- Dramático aumento de oxígeno en la atmósfera
-- Extinción de bacterias anaeróbicas
-- Formación de horizontes de hierro rojo
-- Supercontiente Kenorland en formación
-- Fin del Arcaico y comienzo del Proterozoico`,
+    duration: '300 millones de años',
+    eon: 'Arcaico',
+    content: `El Neoarcaico cierra el Eón Arcaico y prepara el escenario para el cambio más dramático en la atmósfera terrestre.`,
+    characteristics: [
+      'Marca el final del Eón Arcaico',
+      'Estabilización de grandes cratones continentales',
+      'Formación de depósitos masivos de hierro bandeado',
+      'El oxígeno producido por cianobacterias comenzó a acumularse localmente',
+      'Preparación para la Gran Oxidación del Paleoproterozoico',
+      'Desarrollo de ciclos geoquímicos más complejos',
+      'Posible formación de pequeñas masas continentales emergidas'
+    ],
+    life: 'Cianobacterias que realizaban fotosíntesis oxigénica proliferaron masivamente. Liberación continua de O₂ como subproducto. Este oxígeno inicial reaccionaba con hierro en los océanos, precipitándolo y formando los depósitos de hierro bandeado. Inicio de la crisis del oxígeno para organismos anaeróbicos.',
+    fossils: 'Estromatolitos extensos y bien preservados. Microfósiles de cianobacterias en pedernal.',
+    importance: 'Este período estableció las bases para el evento de oxigenación más importante de la historia de la Tierra, que cambiaría completamente la biosfera.',
   },
   paleoproterozoico: {
     title: 'Paleoproterozoico',
-    description: 'El Proterozoico antiguo',
+    description: 'La Gran Oxidación - El cambio más dramático en la historia de la Tierra',
     years: '2.500 - 1.600 millones de años',
-    content: `El Paleoproterozoico marca la transición a un mundo con oxígeno:
+    duration: '900 millones de años',
+    eon: 'Proterozoico',
+    content: `El Paleoproterozoico presenció la transformación más dramática en la historia de la Tierra: la Gran Oxidación, cuando el oxígeno atmosférico aumentó de prácticamente 0% a niveles significativos.`,
+    characteristics: [
+      '**La Gran Oxidación (2.400-2.000 Ma):** Aumento dramático del oxígeno atmosférico del 0.001% al 1-15%',
+      'Formación de los primeros cratones estables a gran escala',
+      'Ensamblaje del supercontinente Columbia (Nuna)',
+      'Primeras glaciaciones masivas: Glaciación Huroniana (2.400-2.100 Ma)',
+      'Formación masiva de depósitos de hierro bandeado antes de la oxidación',
+      'Aparición de "lechos rojos" (sedimentos oxidados) después de la oxidación',
+      'Formación de la capa de ozono protectora',
+      'Cambios fundamentales en la química oceánica y atmosférica',
+      'Primer evento de "Tierra Bola de Nieve" (glaciación global)'
+    ],
+    life: `**Extinción masiva de organismos anaeróbicos:** El oxígeno era altamente tóxico para las formas de vida existentes que habían evolucionado en un mundo anóxico. Esta fue la primera gran extinción masiva de la historia.
 
-- Atmósfera completamente oxigenada
-- Formación de los primeros suelos oxidados
-- Primeras eucariotas primitivas
-- Columnas de estromatolitos muy comunes
-- Glaciaciones extensas (Tierra bola de nieve temprana)
-- Primeros ciclos geoquímicos modernos`,
+**Supervivientes y nuevos organismos:**
+- Organismos que desarrollaron mecanismos para tolerar o usar el oxígeno
+- Primeras células eucariotas (con núcleo definido) hace ~2.100-1.850 Ma
+- Diversificación de cianobacterias
+- Desarrollo de la respiración aeróbica (uso del oxígeno para generar energía)
+- Posible origen de la mitocondria por endosimbiosis`,
+    fossils: 'Estromatolitos abundantes y diversos. Primeros fósiles eucariotas (organismos con núcleo) como Grypania spiralis. Microfósiles de organismos unicelulares complejos.',
+    importance: 'Este fue el mayor cambio ambiental de la historia de la Tierra. El oxígeno permitió la evolución de organismos multicelulares complejos y cambió fundamentalmente todos los ciclos biogeoquímicos del planeta. Sin este evento, la vida compleja como la conocemos no existiría.',
+    impact: 'La Gran Oxidación causó la primera extinción masiva (de organismos anaeróbicos) pero también abrió las puertas para la evolución de toda la vida compleja posterior, incluyéndonos a nosotros.',
   },
   mesoproterozoico: {
     title: 'Mesoproterozoico',
-    description: 'El Proterozoico medio',
+    description: 'Estabilización y primeros pasos hacia la complejidad',
     years: '1.600 - 1.000 millones de años',
-    content: `El Mesoproterozoico es un período de relativa estabilidad:
+    duration: '600 millones de años',
+    eon: 'Proterozoico',
+    content: `El Mesoproterozoico fue un período de relativa estabilidad ambiental donde la vida eucariota se diversificó y desarrolló características fundamentales.`,
+    characteristics: [
+      'Fragmentación del supercontinente Columbia',
+      'Formación del supercontinente Rodinia hacia el final (~1.100 Ma)',
+      'Clima inicialmente cálido y húmedo',
+      'Estabilización de la atmósfera oxigenada (~1-10% O₂)',
+      'Desarrollo de ciclos biogeoquímicos modernos',
+      'Formación de depósitos minerales importantes',
+      'Océanos estratificados con zonas anóxicas en profundidad'
+    ],
+    life: `**Innovaciones evolutivas cruciales:**
 
-- Existencia de eucariotas multicelulares primitivas
-- Posible reproducción sexual en microorganismos
-- Formación de Rodinia (supercontinente)
-- Océanos con vida marina simple
-- Manto y núcleo en evolución
-- Posibles algas rojas y verdes evolucionando`,
+- **Aparición de la reproducción sexual (†1.200 Ma):** Revolucionó la evolución al permitir la recombinación genética y aceleró dramáticamente la diversificación
+- Primeros registros fósiles de algas rojas (Bangiomorpha, ~1.200 Ma)
+- Desarrollo de organismos multicelulares primitivos
+- Colonias extensas de cianobacterias
+- Mayor complejidad en estructuras celulares eucariotas
+- Posible evolución de los cloroplastos por endosimbiosis
+- Primeras algas verdes`,
+    fossils: 'Bangiomorpha pubescens (alga roja multicelular). Tawuia (posible alga multicelular). Microfósiles diversos de eucariotas. Estromatolitos todavía abundantes.',
+    importance: 'La reproducción sexual fue uno de los inventos evolutivos más importantes de todos los tiempos. Permitió que la evolución se acelerara enormemente al mezclar genes de diferentes individuos, facilitando la adaptación y la diversificación. Sin ella, la vida compleja como la conocemos sería imposible.',
   },
   neoproterozoico: {
     title: 'Neoproterozoico',
-    description: 'El Proterozoico reciente',
+    description: 'Tierra Bola de Nieve y el amanecer de los animales',
     years: '1.000 - 541 millones de años',
-    content: `El Neoproterozoico vio cambios drásticos y la preparación para vida compleja:
+    duration: '459 millones de años',
+    eon: 'Proterozoico',
+    content: `El Neoproterozoico fue testigo de los eventos más dramáticos desde la Gran Oxidación: glaciaciones globales extremas seguidas por el surgimiento de los primeros animales complejos.`,
+    characteristics: [
+      'Fragmentación del supercontinente Rodinia (~750 Ma)',
+      '**"Tierra Bola de Nieve":** Dos o más glaciaciones extremas que cubrieron todo el planeta',
+      'Glaciación Sturtiana (~717-660 Ma)',
+      'Glaciación Marinoana (~650-635 Ma)',
+      'Posible glaciación Gaskiers (~580 Ma)',
+      'Hielo desde los polos hasta el ecuador',
+      'Formación del supercontinente Pannotia al final de la era (~550 Ma)',
+      'Niveles de oxígeno aumentaron al 10-15% (similares a los actuales)',
+      'Desarrollo de océanos oxigenados en superficie'
+    ],
+    life: `**Antes de las glaciaciones:**
+- Diversificación de algas y protistas
 
-- Glaciaciones extremas (Tierra bola de nieve) 2 a 4 veces
-- Fragmentación de Rodinia
-- Primeros animales multicelulares complejos (Ediacara)
-- Desarrollo de esqueletos mineralizados
-- Diversificación de algas y esponjas
-- Fin del Precámbrico - comienzo del Fanerozoico`,
+**Durante las glaciaciones:**
+- La vida sobrevivió en refugios: zonas volcánicas submarinas, grietas en el hielo, océanos ecuatoriales no completamente congelados
+
+**Después de las glaciaciones (~635-541 Ma):**
+- **Explosión Ediacárica:** Aparición de los primeros organismos multicelulares macroscópicos
+- **Fauna de Ediacara (~575-541 Ma):** Primeros animales con cuerpos blandos
+  - Dickinsonia: organismo aplanado de hasta 1 metro
+  - Charnia: organismos con forma de fronda
+  - Kimberella: posible molusco primitivo
+- Primeras esponjas y cnidarios (medusas primitivas)
+- Desarrollo de simetría bilateral
+- Primeros organismos con movilidad
+- Aparición de depredación primitiva`,
+    fossils: 'Fauna de Ediacara en Australia, Rusia, Namibia y otros sitios. Cloudina (primer organismo con concha mineralizada). Trazas fósiles (icnofósiles) que muestran movimiento. Espículas de esponja.',
+    importance: 'Las glaciaciones extremas, paradójicamente, pueden haber estimulado la evolución de organismos multicelulares complejos. El aumento del oxígeno atmosférico fue crucial para permitir organismos más grandes y móviles. La Explosión Ediacárica preparó el escenario para la Explosión Cámbrica que vendría después.',
+    impact: 'Este período marca la transición de un mundo dominado por microbios a uno donde los animales complejos comenzaron a aparecer. Es el preludio directo a la explosión de biodiversidad del Cámbrico.',
   },
   paleozoico: {
     title: 'Paleozoico',
-    description: 'La era de los primeros animales complejos',
+    description: 'La Explosión de la Vida Compleja - De los océanos a la tierra',
     years: '541 - 252 millones de años',
-    content: `El Paleozoico vio la explosión de la vida compleja:
+    duration: '289 millones de años',
+    eon: 'Fanerozoico',
+    periods: 'Cámbrico (541-485 Ma), Ordovícico (485-444 Ma), Silúrico (444-419 Ma), Devónico (419-359 Ma), Carbonífero (359-299 Ma), Pérmico (299-252 Ma)',
+    content: `El Paleozoico ("vida antigua") fue testigo de la mayor diversificación de vida compleja en la historia de la Tierra y la conquista de la tierra firme.`,
+    characteristics: [
+      'Fragmentación del supercontinente Pannotia',
+      'Formación del supercontinente Pangea al final de la era (~300 Ma)',
+      'Clima altamente variable: desde cálido-húmedo hasta glaciaciones',
+      'Niveles de oxígeno fluctuantes (15-35%)',
+      'Colonización masiva de la tierra firme por plantas y animales',
+      'Formación de grandes depósitos de carbón (Carbonífero)',
+      'Desarrollo completo de ecosistemas terrestres',
+      'Dos glaciaciones mayores: Ordovícico tardío y Carbonífero-Pérmico'
+    ],
+    life: `**Cámbrico (541-485 Ma) - La Explosión Cámbrica:**
+- Diversificación súbita de casi todos los filos animales modernos en ~20 millones de años
+- Aparición de animales con exoesqueleto, conchas y esqueletos mineralizados
+- Trilobites dominan los océanos (>20.000 especies durante el Paleozoico)
+- Anomalocaris: depredador de 1 metro
+- Pikaia: primer cordado conocido (ancestro de vertebrados)
+- Primeros artrópodos diversos
+- Esponjas, braquiópodos, moluscos primitivos
 
-- **Cámbrico**: Aparición de la mayoría de los grupos animales principales
-- **Ordovícico**: Diversificación de peces y otros animales marinos
-- **Silúrico**: Primeros peces con mandíbulas
-- **Devónico**: Edad de los peces, colonización inicial del continente
-- **Carbonífero**: Grandes bosques de helechos, primeros reptiles
-- **Pérmico**: Reptiles sinapsidos dominantes, primer evento de extinción masiva al final`,
+**Ordovícico (485-444 Ma):**
+- Diversificación masiva de invertebrados marinos
+- Primeros vertebrados: peces sin mandíbula (agnatos)
+- Graptolites abundantes
+- Primeras plantas terrestres primitivas (briófitas)
+- Arrecifes de coral y briozoos
+- Cefalópodos primitivos (nautiloideos)
+- EXTINCIÓN MASIVA al final (~86% especies)
+
+**Silúrico (444-419 Ma):**
+- Primeros peces con mandíbulas (gnatostomados)
+- Plantas vasculares colonizan la tierra (Cooksonia)
+- Primeros artrópodos terrestres (miriápodos, arácnidos)
+- Escorpiones marinos gigantes (euriptéridos) de hasta 2.5 m
+- Recuperación de arrecifes de coral
+
+**Devónico (419-359 Ma) - "Edad de los Peces":**
+- Explosiva diversificación de peces:
+  - Placodermos (peces acorazados): Dunkleosteus de 10 m
+  - Peces cartilaginosos (tiburones primitivos)
+  - Peces óseos
+- Primeros anfibios (Tiktaalik, Ichthyostega) - transición agua-tierra
+- Árboles y bosques verdaderos aparecen
+- Primeros insectos alados
+- Artrópodos terrestres se diversifican
+- EXTINCIÓN MASIVA del Devónico Tardío (~75% especies)
+
+**Carbonífero (359-299 Ma) - "Edad del Carbón":**
+- Grandes bosques pantanosos de helechos arbóreos, licopodios y colas de caballo
+- Oxígeno atmosférico alcanza 35% (máximo histórico)
+- Insectos gigantes por el alto oxígeno:
+  - Meganeura: libélula de 70 cm de envergadura
+  - Arthropleura: miriápodo de 2.6 m
+- Primeros reptiles (Hylonomus)
+- Anfibios gigantes dominan
+- Arañas, escorpiones terrestres abundantes
+- Primeros amniotes (huevos con cáscara)
+
+**Pérmico (299-252 Ma):**
+- Pangea completamente formado
+- Clima árido en el interior del supercontinente
+- Sinápsidos (reptiles mamiferoides) dominan:
+  - Dimetrodon con su vela dorsal
+  - Gorgonopsios: depredadores con dientes de sable
+- Primeros diápsidos (ancestros de dinosaurios y reptiles)
+- Diversificación de reptiles
+- Plantas con semillas se diversifican
+- Insectos modernos evolucionan
+- **GRAN EXTINCIÓN DEL PÉRMICO-TRIÁSICO:** La más devastadora de la historia (~96% especies marinas, 70% terrestres)`,
+    fossils: 'Trilobites (icónicos), braquiópodos, graptolites, crinoideos, peces fósiles abundantes, primeros fósiles de anfibios y reptiles, insectos en ámbar, plantas carbonizadas, huellas de tetrápodos.',
+    importance: 'El Paleozoico transformó completamente la Tierra de un planeta con vida exclusivamente acuática a uno con ecosistemas terrestres complejos. La colonización de la tierra firme fue uno de los eventos más importantes en la historia de la vida. Los bosques del Carbonífero crearon los depósitos de carbón que impulsaron la Revolución Industrial humana.',
+    impact: 'Estableció todos los planes corporales animales básicos que existen hoy. La conquista de la tierra permitió la evolución de vertebrados terrestres, incluyendo eventualmente a los mamíferos y humanos.',
   },
   mesozoico: {
     title: 'Mesozoico',
-    description: 'La era de los dinosaurios',
+    description: 'La Era de los Dinosaurios - El apogeo de los reptiles',
     years: '252 - 66 millones de años',
-    content: `El Mesozoico es famoso como la era de los dinosaurios:
+    duration: '186 millones de años',
+    eon: 'Fanerozoico',
+    periods: 'Triásico (252-201 Ma), Jurásico (201-145 Ma), Cretácico (145-66 Ma)',
+    content: `El Mesozoico ("vida media") es la era más famosa de la prehistoria, dominada por los dinosaurios durante 186 millones de años. Fue una época de clima cálido, sin hielos polares, y con vida abundante en tierra, mar y aire.`,
+    characteristics: [
+      'Fragmentación progresiva del supercontinente Pangea',
+      'Formación de los océanos Atlántico e Índico',
+      'Clima cálido y estable globalmente (sin casquetes polares)',
+      'Nivel del mar mucho más elevado que hoy',
+      'Temperatura promedio 10°C más alta que la actual',
+      'CO₂ atmosférico 3-5 veces mayor que hoy',
+      'Ausencia de hielo en los polos',
+      'Clima subtropical hasta latitudes altas'
+    ],
+    life: `**Triásico (252-201 Ma) - Recuperación y nuevos comienzos:**
 
-- **Triásico**: Primeros dinosaurios, primeros mamíferos pequeños
-- **Jurásico**: Apogeo de los dinosaurios, primeras aves, primeras flores
-- **Cretácico**: Diversificación de dinosaurios, auge de angiospermas, final con extinción masiva
+Tras la devastadora extinción del Pérmico, la vida se recuperó lentamente:
 
-Durante el Cretácico tardío, un asteroide de 10 km impactó en la península de Yucatán (México), causando la extinción de la mayoría de los dinosaurios hace 66 millones de años.`,
+- **Primeros 10 millones de años:** Dominio de Lystrosaurus (un sinápsido herbívoro que representaba el 90% de vertebrados terrestres)
+- **Primeros dinosaurios (†230 Ma):**
+  - Pequeños y bípedos inicialmente
+  - Eoraptor, Herrerasaurus, Coelophysis
+- **Primeros mamíferos (†225 Ma):** Pequeños, nocturnos, insectívoros
+- **Arcosaurios dominan:** Fitosaurios, rauisuquios
+- **Reptiles marinos:** Ictiosaurios, placodontos, notosaurios
+- **Primeros pterosaurios:** Reptiles voladores
+- Cinodontes (ancestros de mamíferos) todavía presentes
+- Plantas: gimnospermas (coníferas, cícadas, ginkgos) dominan
+- **EXTINCIÓN TRIÁSICO-JURÁSICO (†201 Ma):** ~80% especies, eliminó competencia de dinosaurios
+
+**Jurásico (201-145 Ma) - Apogeo de los Dinosaurios:**
+
+Los dinosaurios se diversificaron y dominaron completamente:
+
+- **Dinosaurios gigantes:**
+  - Saurópodos: Brachiosaurus (26 m), Diplodocus (27 m), Apatosaurus
+  - Los animales terrestres más grandes de todos los tiempos
+- **Terópodos:**
+  - Allosaurus: depredador de 12 m
+  - Ceratosaurus
+- **Ornitópodos:** Camptosaurus, Dryosaurus
+- **Estegosaurios:** Stegosaurus con placas dorsales
+- **Primeras aves (†150 Ma):** Archaeopteryx, evolución desde terópodos
+- **Reptiles marinos gigantes:**
+  - Plesiosaurios de cuello largo (15 m)
+  - Ictiosaurios parecidos a delfines
+  - Pliosaurios: Liopleurodon (15 m)
+- **Pterosaurios diversificados:** Pterodactylus, Rhamphorhynchus
+- **Mamíferos:** Pequeños, nocturnos, diversos pero limitados
+- **Plantas:** Primeras plantas con flores (angiospermas) al final del período
+
+**Cretácico (145-66 Ma) - Máxima diversidad:**
+
+El Cretácico fue el período más largo y diverso del Mesozoico:
+
+- **Dinosaurios en su máximo esplendor:**
+  
+  *Terópodos:*
+  - Tyrannosaurus rex (13 m, 9 toneladas) - Cretácico tardío
+  - Spinosaurus (15-18 m) - el mayor terópodo, semi-acuático
+  - Giganotosaurus (13 m)
+  - Carcharodontosaurus
+  - Velociraptores y dromeosaurios
+  
+  *Saurópodos:*
+  - Argentinosaurus (30-40 m, hasta 100 ton) - posiblemente el animal terrestre más grande
+  - Dreadnoughtus, Patagotitan
+  
+  *Herbívoros con armadura:*
+  - Triceratops (9 m) con cuernos y gola
+  - Ankylosaurus (6 m) completamente acorazado
+  
+  *Hadrosaurios (pico de pato):*
+  - Parasaurolophus con cresta craneal
+  - Edmontosaurus (13 m)
+
+- **Reptiles marinos del Cretácico:**
+  - Mosasaurios: Tylosaurus (15 m), Mosasaurus (17 m)
+  - Plesiosaurios gigantes: Elasmosaurus (14 m)
+  
+- **Pterosaurios gigantes:**
+  - Quetzalcoatlus (10-12 m envergadura) - el animal volador más grande de todos los tiempos
+  - Pteranodon (7 m envergadura)
+
+- **Aves modernas:** Diversificación temprana de aves verdaderas
+
+- **Mamíferos:** Mayor diversidad, pero aún pequeños y limitados
+
+- **Plantas con flores (angiospermas):** Revolución botánica
+  - Aparición ~130 Ma
+  - Se volvieron dominantes hacia el final
+  - Co-evolución con insectos polinizadores
+  - Flores, frutas, hierbas modernas
+
+- **Insectos:** Abejas, mariposas, hormigas, termitas modernas evolucionan
+
+**EXTINCIÓN K-Pg (66 Ma):** Asteroide de 10-15 km impacta en Chicxulub (México), causando la extinción de ~75% de especies, incluyendo TODOS los dinosaurios no avianos.`,
+    fossils: 'Abundantísimos fósiles de dinosaurios en todos los continentes. Esqueletos completos, huevos, nidos, huellas, coprolitos. Ámbar con insectos y plumas. Reptiles marinos excepcionales. Primeras aves con plumas preservadas (Archaeopteryx).',
+    importance: 'El Mesozoico demostró que los reptiles podían alcanzar tamaños, diversidad y dominancia sin precedentes. Los dinosaurios fueron los vertebrados terrestres más exitosos de todos los tiempos, dominando durante 186 millones de años (en comparación, los humanos modernos existimos solo ~300.000 años). La evolución de las plantas con flores cambió completamente los ecosistemas terrestres y creó la base de la agricultura humana futura.',
+    impact: 'Las aves modernas son dinosaurios supervivientes - los dinosaurios nunca se extinguieron realmente. Los mamíferos sobrevivieron como especies pequeñas, estableciendo la línea que eventualmente llevaría a los primates y humanos.',
   },
   cenozoico: {
     title: 'Cenozoico',
-    description: 'La era de los mamíferos',
+    description: 'La Era de los Mamíferos - Nuestro mundo moderno',
     years: '66 millones de años - presente',
-    content: `El Cenozoico es la era actual, dominada por los mamíferos:
+    duration: '66 millones de años (en curso)',
+    eon: 'Fanerozoico',
+    periods: 'Paleógeno (66-23 Ma), Neógeno (23-2.6 Ma), Cuaternario (2.6 Ma - presente)',
+    content: `El Cenozoico ("vida nueva") es la era actual, marcada por el dominio de los mamíferos tras la extinción de los dinosaurios. Es nuestra era - el tiempo en que evolucionaron los primates, los homínidos y finalmente nuestra especie, Homo sapiens.`,
+    characteristics: [
+      'Continentes se mueven a sus posiciones actuales',
+      'Formación de las grandes cordilleras modernas: Himalaya, Andes, Alpes, Montañas Rocosas',
+      'Colisión de India con Asia (~50-40 Ma) creando el Himalaya',
+      'Separación definitiva de Sudamérica y África',
+      'Formación del Istmo de Panamá (~3 Ma) conectando las Américas',
+      'Clima inicialmente cálido (Paleoceno-Eoceno) que se enfrió progresivamente',
+      'Formación de casquetes polares en Antártida (~34 Ma) y Ártico (~3 Ma)',
+      'Ciclos glaciales-interglaciales en el Cuaternario',
+      'Nivel del mar variable según glaciaciones'
+    ],
+    life: `**Paleógeno (66-23 Ma) - Explosión de los Mamíferos:**
 
-- **Paleógeno**: Primeros mamíferos diversos tras extinción de dinosaurios
-- **Neógeno**: Primates evolucionando, primeros homínidos hace 6-7 millones de años
-- **Cuaternario**: Glaciaciones repetidas, evolución de los humanos
+Tras la extinción K-Pg, los mamíferos ocuparon rápidamente los nichos dejados por los dinosaurios:
 
-Hace 300.000 años aparece el Homo sapiens, y hace 10.000 años comienza la agricultura. El Cenozoico incluye la Era Actual, que algunos científicos llaman "Antropoceno" debido al impacto humano en el planeta.`,
+**Paleoceno (66-56 Ma):**
+- Mamíferos pequeños se diversifican rápidamente
+- Primeros ungulados (ancestros de caballos, vacas)
+- Primeros primates primitivos (plesiadapiformes)
+- Aves se diversifican: "aves del terror" (Phorusrhacidae) de 3 m en Sudamérica
+- Primeros mamíferos marinos: ballenas primitivas en transición (Pakicetus)
+- Bosques tropicales dominan
+
+**Eoceno (56-34 Ma):**
+- Mamíferos alcanzan gran tamaño
+- Primates verdaderos aparecen
+- Ballenas completamente acuáticas: Basilosaurus (18 m)
+- Caballos primitivos: Eohippus del tamaño de un perro
+- Murciélagos (únicos mamíferos voladores)
+- Máximo térmico del Paleoceno-Eoceno: temperaturas globales 8°C más altas
+- Cocodrilos y tortugas gigantes en el Ártico
+
+**Oligoceno (34-23 Ma):**
+- Enfriamiento global, comienza la glaciación antártica
+- Aparición de pastos (gramíneas) - revolución ecológica
+- Primeros simios (hominoideos)
+- Mamíferos terrestres gigantes:
+  - Indricotherium (rinoceronte sin cuerno de 5 m de alto, 20 ton) - mayor mamífero terrestre conocido
+- Félidos con dientes de sable emergen
+- Primeros elefantes primitivos
+
+**Neógeno (23-2.6 Ma) - Consolidación:**
+
+**Mioceno (23-5.3 Ma):**
+- Expansión masiva de praderas en todos los continentes
+- Megafauna de pastoreo evoluciona
+- Grandes simios se diversifican: Proconsul, Dryopithecus
+- Divergencia orangután-gorila-humano-chimpancé
+- Última conexión marítima entre Atlántico y Pacífico se cierra (Istmo de Panamá)
+- Aves modernas dominan completamente
+- Megalodon (Otodus megalodon): tiburón de 18 m, mayor depredador marino
+- Mamíferos marinos modernos establecidos: ballenas, delfines, focas
+
+**Plioceno (5.3-2.6 Ma):**
+- Clima se enfría hacia glaciaciones
+- **Primeros homínidos bípedos (~7-6 Ma):** Sahelanthropus, Orrorin
+- **Australopithecus (~4-2 Ma):** Lucy (A. afarensis, 3.2 Ma)
+- Megafauna bien establecida en todos los continentes
+- Conexión de las Américas causa "Gran Intercambio Americano" de fauna
+- Mamuts y mastodontes en el hemisferio norte
+
+**Cuaternario (2.6 Ma - presente) - Edad del Hielo y Humanos:**
+
+**Pleistoceno (2.6 Ma - 11.700 años):**
+
+Ciclos glaciales-interglaciales cada 40.000-100.000 años:
+
+- Megafauna del Pleistoceno en su apogeo:
+  - Mamuts lanudos (Mammuthus primigenius)
+  - Mastodontes americanos
+  - Smilodon (tigre dientes de sable)
+  - Perezosos gigantes terrestres: Megatherium (6 m)
+  - Gliptodontes (armadillos gigantes de 3 m)
+  - Osos de las cavernas (Ursus spelaeus)
+  - León de las cavernas (Panthera spelaea)
+  - Rinocerontes lanudos
+  - Megaloceros (alce irlandés con astas de 3.6 m)
+
+- **Evolución humana:**
+  - Homo habilis (~2.8-1.5 Ma): primeras herramientas
+  - Homo erectus (~2-0.1 Ma): primero en salir de África, uso del fuego
+  - Homo heidelbergensis (~700-200 ka)
+  - Homo neanderthalensis (~400-40 ka): Neandertales en Europa y Asia
+  - Homo denisovano (~300-30 ka)
+  - **Homo sapiens (~300 ka):** Nuestra especie surge en África
+  - Dispersión de H. sapiens fuera de África (~70-60 ka)
+  - Arte rupestre (~40 ka)
+  - Extinción de Neandertales y otras especies humanas (~40-30 ka)
+
+- **Extinción de la megafauna del Pleistoceno (~50-10 ka):**
+  - Combinación de cambio climático + caza humana
+  - ~80% de mamíferos grandes desaparecen
+  - Mamuts, mastodontes, tigres dientes de sable, perezosos gigantes extintos
+
+**Holoceno (11.700 años - ~1950 CE):**
+- Fin de la última glaciación
+- Clima cálido y estable
+- **Revolución Neolítica (~10.000 años):** Agricultura y domesticación
+- Surgimiento de civilizaciones humanas
+- Explosión demográfica humana
+- Extinción continua de especies por actividad humana
+
+**Antropoceno (~1950 - presente):**
+- Era propuesta por el impacto humano masivo
+- Cambio climático antropogénico acelerado
+- **Sexta Extinción Masiva en curso:** causada por humanos
+- Modificación de ~50% de la superficie terrestre
+- Cambio en ciclos biogeoquímicos globales`,
+    fossils: 'Fósiles excepcionalmente bien preservados. Mamuts congelados en permafrost con tejidos blandos, pelo y contenido estomacal. Insectos en ámbar. Pozos de alquitrán (La Brea) con fauna completa. Fósiles humanos y herramientas. Arte rupestre y pinturas.',
+    importance: 'El Cenozoico es nuestra era. Sin la extinción de los dinosaurios, los mamíferos nunca habrían dominado y los humanos nunca habrían evolucionado. Este período vio el surgimiento de la inteligencia, el lenguaje, la tecnología y la civilización. Por primera vez en la historia de la Tierra, una especie (Homo sapiens) tiene el poder de modificar fundamentalmente el planeta entero y causar extinciones masivas.',
+    impact: 'Vivimos en el Cenozoico. Todo lo que conocemos - ciudades, agricultura, tecnología, arte, ciencia - surgió en los últimos 10.000 años de esta era de 66 millones de años. Somos testigos y participantes de cambios ambientales que rivalizan con extinciones masivas previas, pero por primera vez, estos cambios son causados por una sola especie: nosotros.',
+    current_status: 'Época actual: Holoceno/Antropoceno. Estamos en una transición crítica donde nuestras acciones determinarán el futuro de incontables especies, incluyendo potencialmente la nuestra.',
   },
 };
 
@@ -170,26 +537,122 @@ if (!current) {
 ---
 
 <StarlightPage frontmatter={{ title: current.title, description: current.description }}>
-  <p><strong>Período:</strong> {current.years}</p>
+  <div class="era-header">
+    <p><strong>Período:</strong> {current.years}</p>
+    <p><strong>Duración:</strong> {current.duration}</p>
+    {current.eon && <p><strong>Eón:</strong> {current.eon}</p>}
+    {current.periods && <p><strong>Períodos incluidos:</strong> {current.periods}</p>}
+  </div>
   
   <section>
     <h2>Descripción General</h2>
-    {current.content.split('\n\n').map((paragraph: string) => (
-      <p>{paragraph}</p>
-    ))}
+    <p>{current.content}</p>
   </section>
   
-  <p><a href="/eras/">← Volver a Eras Geológicas</a></p>
+  {current.characteristics && (
+    <section>
+      <h2>Características Geológicas y Climáticas</h2>
+      <ul>
+        {current.characteristics.map((char: string) => (
+          <li set:html={char} />
+        ))}
+      </ul>
+    </section>
+  )}
+  
+  {current.life && (
+    <section>
+      <h2>Vida y Evolución</h2>
+      <div set:html={current.life.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>')} />
+    </section>
+  )}
+  
+  {current.fossils && (
+    <section>
+      <h2>Fósiles Destacados</h2>
+      <p>{current.fossils}</p>
+    </section>
+  )}
+  
+  {current.importance && (
+    <section>
+      <h2>Importancia Histórica</h2>
+      <p>{current.importance}</p>
+    </section>
+  )}
+  
+  {current.impact && (
+    <section>
+      <h2>Impacto en la Historia de la Vida</h2>
+      <p>{current.impact}</p>
+    </section>
+  )}
+  
+  {current.current_status && (
+    <section class="current-era">
+      <h2>Estado Actual</h2>
+      <p>{current.current_status}</p>
+    </section>
+  )}
+  
+  <div class="navigation">
+    <a href="/eras/">← Volver a Eras Geológicas</a>
+  </div>
 </StarlightPage>
 
 <style>
-  a {
+  .era-header {
+    background: rgba(var(--sl-color-accent-low), 0.3);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--sl-color-accent);
+  }
+  
+  .era-header p {
+    margin: 0.5rem 0;
+  }
+  
+  section {
+    margin: 2rem 0;
+  }
+  
+  section h2 {
+    color: var(--sl-color-accent);
+    border-bottom: 2px solid var(--sl-color-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    line-height: 1.8;
+  }
+  
+  li {
+    margin: 0.5rem 0;
+  }
+  
+  .current-era {
+    background: var(--sl-color-accent-low);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--sl-color-accent);
+  }
+  
+  .navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+  
+  .navigation a {
     color: var(--sl-color-accent);
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.1rem;
   }
   
-  a:hover {
+  .navigation a:hover {
     text-decoration: underline;
   }
 </style>

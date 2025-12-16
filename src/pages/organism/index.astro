@@ -12,7 +12,7 @@ const organisms: Organism[] = getOrganisms();
   
   <CardGrid>
     {organisms.map(org => (
-      <Card title={org.name} icon="document">
+      <Card title={`🦖 ${org.name}`}>
         <p>{org.description}</p>
         <p><strong>Era:</strong> {org.era}</p>
         <p><strong>Dieta:</strong> {org.diet}</p>
