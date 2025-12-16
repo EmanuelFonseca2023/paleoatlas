@@ -1,0 +1,33 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+---
+
+<StarlightPage frontmatter={{ title: 'Sobre PaleoAtlas', description: 'Conoce más sobre este proyecto de enciclopedia prehistórica' }}>
+  <p>PaleoAtlas es una enciclopedia interactiva dedicada a preservar y compartir el conocimiento sobre la vida prehistórica. Nuestro objetivo es hacer accesible la paleontología y la historia de la Tierra a través de fichas detalladas de organismos extintos, eras geológicas y eventos cataclísmicos.</p>
+  
+  <h2>Nuestro Propósito</h2>
+  
+  <p>Creemos que entender nuestro pasado geológico es fundamental para comprender nuestro presente y futuro. A través de la documentación rigurosa de especies extintas, ambientes antiguos y cambios climáticos históricos, trabajamos para:</p>
+  
+  <ul>
+    <li>Educar sobre la evolución de la vida en la Tierra</li>
+    <li>Difundir el conocimiento paleontológico de manera accesible</li>
+    <li>Inspirar curiosidad sobre la historia natural</li>
+    <li>Contribuir a la comprensión del cambio ambiental</li>
+  </ul>
+  
+  <h2>¿Qué Encontrarás Aquí?</h2>
+  
+  <CardGrid>
+    <Card title="Organismos" icon="add-document">
+      Fichas detalladas de especies prehistóricas con información sobre su clasificación, distribución temporal y características.
+    </Card>
+    <Card title="Eras Geológicas" icon="open-book">
+      Información sobre las diferentes eras y períodos geológicos que definen la historia de la Tierra.
+    </Card>
+    <Card title="Extinciones" icon="document">
+      Eventos de extinción masiva que moldearon la evolución de la vida en el planeta.
+    </Card>
+  </CardGrid>
+</StarlightPage>

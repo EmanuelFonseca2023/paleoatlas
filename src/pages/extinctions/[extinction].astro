@@ -1,0 +1,178 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { extinction: 'ordovicico-silurico' } },
+    { params: { extinction: 'devonico' } },
+    { params: { extinction: 'permico' } },
+    { params: { extinction: 'triasico-jurasico' } },
+    { params: { extinction: 'cretacico-paleogeno' } },
+  ];
+}
+
+const { extinction } = Astro.params;
+
+const extinctionData: Record<string, any> = {
+  'ordovicico-silurico': {
+    title: 'Extinción del Ordovícico-Silúrico',
+    description: 'La primera extinción masiva conocida',
+    when: 'Hace aproximadamente 443 millones de años',
+    severity: '85% de las especies marinas',
+    content: `La extinción del Ordovícico-Silúrico fue la primera extinción masiva conocida:
+
+**Causas Principales:**
+- Glaciación extrema en el continente de Gondwana
+- Cambios rápidos en el nivel del mar
+- Enfriamiento global significativo
+- Posible impacto de rayos cósmicos
+
+**Efectos:**
+- Eliminación del 85% de las especies marinas
+- Colapso de ecosistemas marinos
+- Supervivencia de algunos trilobites, braquiópodos y peces primitivos
+- Fauna marina completamente reorganizada
+
+**Recuperación:**
+- Diversificación gradual de peces en el Silúrico
+- Reconstitución de arrecifes de coral
+- Desarrollo de nuevas comunidades marinas`,
+  },
+  devonico: {
+    title: 'Extinción del Devónico',
+    description: 'La extinción del Devónico tardío',
+    when: 'Hace aproximadamente 375 millones de años',
+    severity: '75% de las especies',
+    content: `La extinción del Devónico fue compleja y ocurrió en múltiples pulsos:
+
+**Causas Principales:**
+- Cambios en los niveles de oxígeno oceánico
+- Cambios climáticos drásticos
+- Posible impacto de asteroide
+- Evolución de plantas terrestres que alteró el ciclo del carbono
+
+**Efectos:**
+- Eliminación del 75% de todas las especies
+- Casi total desaparición de los placodermos (peces acorazados)
+- Crisis en los arrecifes de coral
+- Supervivencia de algunos peces con esqueleto óseo
+
+**Recuperación:**
+- Diversificación de peces óseos
+- Desarrollo de nuevos arrecifes en el Carbonífero
+- Primeros anfibios evolucionando`,
+  },
+  permico: {
+    title: 'Gran Extinción del Pérmico',
+    description: 'La extinción más severa de todas',
+    when: 'Hace aproximadamente 252 millones de años',
+    severity: '96% de las especies marinas',
+    content: `La Gran Extinción del Pérmico fue la más severa en la historia de la Tierra:
+
+**Causas Principales:**
+- Volcanism masivo en Siberia (Traps Siberianos)
+- Cambio climático drástico
+- Emisiones de dióxido de carbono y ácido sulfúrico
+- Anoxia oceánica (ausencia de oxígeno)
+- Posible impacto de asteroide
+
+**Efectos:**
+- 96% de las especies marinas extintas
+- 70% de las especies de vertebrados terrestres extintas
+- Colapso total de los ecosistemas
+- Casi extinción de toda la vida en la Tierra
+- Denominada "La Gran Mortandad"
+
+**Recuperación:**
+- Tardó millones de años
+- Permitió la diversificación de reptiles
+- Base para la era de los dinosaurios`,
+  },
+  'triasico-jurasico': {
+    title: 'Extinción del Triásico-Jurásico',
+    description: 'El evento que permitió el dominio de los dinosaurios',
+    when: 'Hace aproximadamente 201 millones de años',
+    severity: '76% de todas las especies',
+    content: `La extinción del Triásico-Jurásico marcó la transición entre eras:
+
+**Causas Principales:**
+- Fragmentación del supercontinente Pangea
+- Volcanism masivo
+- Cambios en corrientes oceánicas
+- Posible impacto de asteroide
+- Cambios drásticos de temperatura
+
+**Efectos:**
+- 76% de todas las especies extintas
+- Colapso de los reptiles sinapsidos dominantes
+- Extinción de muchos anfibios y reptiles madrugadores
+- Supervivencia de dinosaurios pequeños
+- Sobrevivencia de primeros mamíferos
+
+**Recuperación:**
+- Diversificación masiva de dinosaurios en el Jurásico
+- Aumento del tamaño de los dinosaurios
+- Evolución de las primeras aves
+- Dominio de los dinosaurios durante 165 millones de años`,
+  },
+  'cretacico-paleogeno': {
+    title: 'Extinción del Cretácico-Paleógeno',
+    description: 'El impacto que cambió todo',
+    when: 'Hace aproximadamente 66 millones de años',
+    severity: 'Extinción de los dinosaurios',
+    content: `La extinción del Cretácico-Paleógeno es la extinción más estudiada y documentada:
+
+**Causas Principales:**
+- Impacto de asteroide de 10 km de diámetro en Yucatán, México
+- Volcanism contemporáneo en los Deccan Traps (India)
+- Erupciones volcánicas extensas
+- Invierno de impacto - oscuridad y frío extremo
+- Cambios químicos en la atmósfera
+
+**Efectos:**
+- Extinción de todos los dinosaurios no aviares
+- Extinción de muchos reptiles marinos (mosasaurios, ictiosaurios)
+- Extinción de muchos mamíferos
+- Explosión de destrucción generalizada
+- Colapso de cadenas alimenticias
+
+**Recuperación:**
+- Explosión adaptativa de mamíferos en el Cenozoico
+- Evolución de la fauna moderna
+- Diversificación de aves modernas
+- Base para la evolución de primates y humanos
+- El evento más famoso en la historia de la Tierra`,
+  },
+};
+
+const current = extinctionData[extinction];
+if (!current) {
+  throw new Error(`Extinción no encontrada: ${extinction}`);
+}
+---
+
+<StarlightPage frontmatter={{ title: current.title, description: current.description }}>
+  <p><strong>Cuándo:</strong> {current.when}</p>
+  <p><strong>Severidad:</strong> {current.severity}</p>
+  
+  <section>
+    <h2>Detalles</h2>
+    {current.content.split('\n\n').map((paragraph: string) => (
+      <p>{paragraph}</p>
+    ))}
+  </section>
+  
+  <p><a href="/extinctions/">← Volver a Extinciones Masivas</a></p>
+</StarlightPage>
+
+<style>
+  a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

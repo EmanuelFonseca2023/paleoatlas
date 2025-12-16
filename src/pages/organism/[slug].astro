@@ -1,0 +1,52 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getOrganisms, getOrganismBySlug } from '../../lib/db';
+import type { Organism } from '../../lib/types';
+
+/**
+ * Se ejecuta SOLO en build time (SSG)
+ */
+export async function getStaticPaths() {
+  const organisms: Organism[] = getOrganisms();
+
+  return organisms.map(o => ({
+    params: { slug: o.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const organism = getOrganismBySlug(slug);
+
+if (!organism) {
+  throw new Error(`Organism not found: ${slug}`);
+}
+---
+
+<StarlightPage frontmatter={{ title: organism.name, description: organism.description ?? `Ficha del organismo prehistórico ${organism.name}.` }}>
+  <section>
+    <h2>Clasificación</h2>
+    <CardGrid>
+      <Card title="Reino" icon="document">
+        {organism.kingdom}
+      </Card>
+      <Card title="Clado" icon="document">
+        {organism.clade}
+      </Card>
+      <Card title="Era" icon="document">
+        {organism.era}
+      </Card>
+      <Card title="Período" icon="document">
+        {organism.period}
+      </Card>
+      <Card title="Dieta" icon="document">
+        {organism.diet}
+      </Card>
+    </CardGrid>
+  </section>
+
+  <section>
+    <h2>Descripción</h2>
+    <p>{organism.description}</p>
+  </section>
+</StarlightPage>

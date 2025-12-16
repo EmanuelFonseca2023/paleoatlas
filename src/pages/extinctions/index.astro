@@ -1,0 +1,44 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+---
+
+<StarlightPage frontmatter={{ title: 'Extinciones Masivas', description: 'Los eventos de extinción masiva que transformaron la vida en la Tierra' }}>
+  
+  <p>A lo largo de la historia de la Tierra ha habido varios eventos de extinción masiva que eliminaron la mayoría de las especies vivas. Estos eventos fueron cruciales en la evolución del planeta.</p>
+  
+  <CardGrid>
+    <Card title="Extinción del Ordovícico-Silúrico" icon="document">
+      <p>Hace ~443 millones de años. Eliminó aproximadamente el 85% de las especies marinas.</p>
+      <p><a href="/extinctions/ordovicico-silurico/">Más información →</a></p>
+    </Card>
+    <Card title="Extinción del Devónico" icon="document">
+      <p>Hace ~375 millones de años. Afectó principalmente a peces y organismos marinos.</p>
+      <p><a href="/extinctions/devonico/">Más información →</a></p>
+    </Card>
+    <Card title="Gran Extinción del Pérmico" icon="document">
+      <p>Hace ~252 millones de años. La más severa, eliminó el 96% de las especies marinas.</p>
+      <p><a href="/extinctions/permico/">Más información →</a></p>
+    </Card>
+    <Card title="Extinción del Triásico-Jurásico" icon="document">
+      <p>Hace ~201 millones de años. Permitió el dominio de los dinosaurios.</p>
+      <p><a href="/extinctions/triasico-jurasico/">Más información →</a></p>
+    </Card>
+    <Card title="Extinción del Cretácico-Paleógeno" icon="document">
+      <p>Hace ~66 millones de años. El impacto de un asteroide. Extinguió a los dinosaurios.</p>
+      <p><a href="/extinctions/cretacico-paleogeno/">Más información →</a></p>
+    </Card>
+  </CardGrid>
+
+<style>
+  a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</StarlightPage>

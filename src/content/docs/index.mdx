@@ -1,40 +1,44 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: PaleoAtlas
+description: Enciclopedia interactiva de la vida prehistórica
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Explora la fascinante historia de la vida en la Tierra
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Explorar Organismos
+      link: /organism/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Sobre el Proyecto
+      link: /about/
+      icon: external	
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Temas Principales
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Organismos" icon="add-document">
+		Descubre las especies más fascinantes de la prehistoria. Desde dinosaurios icónicos hasta criaturas marinas antiguas.
+		
+		[Explorar organismos →](/organism/)
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Eras Geológicas" icon="open-book">
+		Recorre las diferentes eras geológicas que marcaron la evolución de la vida en nuestro planeta.
+		
+		[Ver eras →](/eras/)
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Extinciones" icon="document">
+		Conoce los eventos de extinción masiva que cambiaron el curso de la historia natural.
+		
+		[Aprender más →](/extinctions/)
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Sobre el Proyecto" icon="setting">
+		Una enciclopedia dedicada a preservar el conocimiento de la vida prehistórica. Aprende más sobre PaleoAtlas.
+		
+		[Conocer más →](/about/)
 	</Card>
 </CardGrid>

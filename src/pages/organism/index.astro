@@ -1,0 +1,35 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getOrganisms } from '../../lib/db';
+import type { Organism } from '../../lib/types';
+
+const organisms: Organism[] = getOrganisms();
+---
+
+<StarlightPage frontmatter={{ title: 'Organismos', description: 'Explora la fauna y flora de la era prehistórica' }}>
+  <p>Descubre las especies más fascinantes que habitaron nuestro planeta hace millones de años.</p>
+  
+  <CardGrid>
+    {organisms.map(org => (
+      <Card title={org.name} icon="document">
+        <p>{org.description}</p>
+        <p><strong>Era:</strong> {org.era}</p>
+        <p><strong>Dieta:</strong> {org.diet}</p>
+        <a href={`/organism/${org.slug}/`}>Ver ficha →</a>
+      </Card>
+    ))}
+  </CardGrid>
+</StarlightPage>
+
+<style>
+  a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
